@@ -49,13 +49,59 @@ function nowTime() {
 // 今年内的 7月1日
 // 今年外的 2018年8月31日
 function showDate(){
-    debugger
-    let oldTime = 0;
-    if (localStorage.getItem('oldtime')) {
-        oldTime = localStorage.getItem('oldtime')
-    }else{
-        oldTime = new Date().getTime();
-        localStorage.setItem('oldtime',oldTime)
+    // let oldTime = 0;//1594166828668
+    // if (localStorage.getItem('oldtime')) {
+    //     oldTime = localStorage.getItem('oldtime')
+    // }else{
+    //     oldTime = new Date().getTime();
+    //     localStorage.setItem('oldtime',oldTime)
+    // }
+    // console.log(oldTime)
+    let oldTime = 1594155828668;
+    let newTime = new Date().getTime();
+    let apartTime = newTime - oldTime;
+    console.log(apartTime,newTime,oldTime)
+    if (parseInt(apartTime) < (1000*60*60)){
+        let min = parseInt(apartTime / (1000*60))
+        return min + '分钟前'
+    }else if(parseInt(apartTime) < (1000*60*60*24) && parseInt(apartTime) > (1000*60*60)){
+        let hour = parseInt(apartTime / (1000*60*60))
+        if (hour < 6){
+            return hour + '小时前'
+        } else{
+            
+        }
+    }else if (parseInt(apartTime) < (1000*60*60*24*7) && parseInt(apartTime) > (1000*60*60*24)){
+
     }
-    console.log(oldTime)
+}
+
+//将0->周日 日期转换
+function weekDay(n) {
+    switch (n){
+        case 0:
+            return '周日'
+            break;
+        case 1:
+            return '周一'
+            break;
+        case 2:
+            return '周二'
+            break;
+        case 3:
+            return '周三'
+            break;
+        case 4:
+            return '周四'
+            break;
+        case 5:
+            return '周五'
+            break;
+        case 6:
+            return '周六'
+            break;
+        default:
+            return '周八'
+            break
+    }
 }

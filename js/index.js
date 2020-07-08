@@ -2,6 +2,7 @@ function log(text){
     console.log(text)
 }
 var time = document.getElementById('time');
-time.innerHTML = nowTime()
+// time.innerHTML = nowTime()
 
-showDate()
+// showDate()
+time.innerHTML = showDate()
