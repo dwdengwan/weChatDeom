@@ -13,7 +13,10 @@ function num(n) {
 
 //将当前日期转换为 XX年XX月XX日 XX:XX:XX
 function nowTime() {
-    let date = new Date();
+    // if (date == undefined) {
+    //     date = new Date();
+    // }
+    let date = new Date()
     let year = date.getFullYear();
     let month = date.getMonth()+1;
     // num(month)
@@ -69,7 +72,7 @@ function showDate(){
         if (hour < 6){
             return hour + '小时前'
         } else{
-            
+            return hour = nowTime()
         }
     }else if (parseInt(apartTime) < (1000*60*60*24*7) && parseInt(apartTime) > (1000*60*60*24)){
 
