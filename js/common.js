@@ -75,7 +75,7 @@ function showDate(){
             return hour = nowTime()
         }
     }else if (parseInt(apartTime) < (1000*60*60*24*7) && parseInt(apartTime) > (1000*60*60*24)){
-
+        return hour = nowTime()
     }
 }
 
