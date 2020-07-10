@@ -12,11 +12,16 @@ function num(n) {
 }
 
 //将当前日期转换为 XX年XX月XX日 XX:XX:XX
-function nowTime() {
+function nowTime(num) {
+    let date;
+    if (num == undefined){
+        date = new Date()
+    }else{
+        date = new Date(parseInt(num))
+    }
     // if (date == undefined) {
     //     date = new Date();
     // }
-    let date = new Date()
     let year = date.getFullYear();
     let month = date.getMonth()+1;
     // num(month)
@@ -43,7 +48,6 @@ function nowTime() {
     if (parseInt(second) < 10){
         second = '0' + second
     }
-    console.log(year,month,day,hour,minute,second)
     return year+'年'+month+'月'+day+'日 '+hour +':'+minute+':'+second
 }
 
@@ -60,22 +64,69 @@ function showDate(){
     //     localStorage.setItem('oldtime',oldTime)
     // }
     // console.log(oldTime)
-    let oldTime = 1594155828668;
+    let oldTime = 1594301899668;
     let newTime = new Date().getTime();
     let apartTime = newTime - oldTime;
     console.log(apartTime,newTime,oldTime)
-    if (parseInt(apartTime) < (1000*60*60)){
+    let date = nowTime(oldTime)
+    console.log(date)
+    if (parseInt(apartTime) < (1000*60*60)){ //一小时内
         let min = parseInt(apartTime / (1000*60))
         return min + '分钟前'
-    }else if(parseInt(apartTime) < (1000*60*60*24) && parseInt(apartTime) > (1000*60*60)){
+    }else if(parseInt(apartTime) < (1000*60*60*24) && parseInt(apartTime) > (1000*60*60)){ //当日内
         let hour = parseInt(apartTime / (1000*60*60))
         if (hour < 6){
             return hour + '小时前'
         } else{
-            return hour = nowTime()
+            let middle =parseInt(date.split('日')[1].split(':')[0])
+            if (middle > 0 && middle < 6) {
+                middle = '凌晨'
+            }else if(middle >= 6 && middle < 11){
+                middle = '上午'
+            }else if(middle >= 12 && middle < 14){
+                middle = '中午'
+            }else if(middle >= 14 && middle < 18){
+                middle = '下午'
+            }else if(middle >= 18 && middle < 22){
+                middle = '晚上'
+            }else if(middle >= 22 && middle < 24){
+                middle = '深夜'
+            }
+            let h = date.split('日')[1].split(':')[0] + ':' + date.split('日')[1].split(':')[1]
+            return middle + ' ' + h
         }
-    }else if (parseInt(apartTime) < (1000*60*60*24*7) && parseInt(apartTime) > (1000*60*60*24)){
-        return hour = nowTime()
+    }else if (parseInt(apartTime) < (1000*60*60*24*7) && parseInt(apartTime) > (1000*60*60*24)){ //本周内
+        // nowTime()
+        let weekDay = new Date(oldTime).getDay()
+        switch (weekDay){
+            case 0:
+                weekDay = '周日'
+                break;
+            case 1:
+                weekDay = '周一'
+                break;
+            case 2:
+                weekDay = '周二'
+                break;
+            case 3:
+                weekDay = '周三'
+                break;
+            case 4:
+                weekDay = '周四'
+                break;
+            case 5:
+                weekDay = '周五'
+                break;
+            case 6:
+                weekDay = '周六'
+                break;
+        }
+        return weekDay
+    }else if (parseInt(apartTime) > (1000*60*60*24*7) && parseInt(apartTime) < (1000*60*60*24*365)){ //今年内
+        let mon = date.split('年')[1].split('日')[0]+'日'
+        return mon
+    }else { //往年
+        return nowTime()
     }
 }
 
