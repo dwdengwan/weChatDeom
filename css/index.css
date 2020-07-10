@@ -16,10 +16,17 @@
     background: rgba(200,0,50,.9);
 }
 
-.index{
+.index,.other{
     position: absolute;
     width: 100%;
     height: 100%;
+}
+.index{
+    /*display: none;*/
+}
+.other{
+    bottom:100%;
+    left: 0;
 }
 .index-header{
     width: 96%;
@@ -94,4 +101,19 @@
 }
 .index-footer-child.active .index-footer-img{
     background: pink;
+}
+.other-header{
+    width: 100%;
+    height: 10%;
+    background: rgba(100,0,50,.4);
+}
+.other-content{
+    width: 100%;
+    height: 80%;
+    background: rgba(50,100,200,0.5);
+}
+.other-footer{
+    width: 100%;
+    height: 10%;
+    background: rgba(200,100,50,.5);
 }

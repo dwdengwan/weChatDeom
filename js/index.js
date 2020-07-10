@@ -3,6 +3,7 @@ function log(text){
 }
 var time = document.getElementById('time');
 var index = document.getElementById('index');
+var other = document.getElementById('other');
 var content = document.getElementById('content');
 var screen = document.getElementById('screen');
 var sContent = document.getElementById('sContent');
@@ -25,18 +26,35 @@ index.addEventListener('touchstart',function (e) {
 })
 
 index.addEventListener('touchmove',function (e) {
-    targetT = e.target.offsetTop;
-    console.log(targetT,oldT,H)
-    if (targetT > oldT && H < index.offsetHeight){
-        H++;
-    } else if(targetT < oldT && H > 0){
-        H--;
-    }
+    // targetT = e.target.offsetTop;
+    // console.log(targetT,oldT,H)
+    // if (targetT > oldT && H < index.offsetHeight){
+    //     H++;
+    // } else if(targetT < oldT && H > 0){
+    //     H--;
+    // }
+    H++
     index.style.top = H +'%';
+    other.style.bottom = (100 -H) + '%';
 })
 
 index.addEventListener('touchend',function (e) {
+    if (H>50){
+        // index.style.top = '100%';
+        index.style.display = 'none';
+        // other.style.top = 0;
+        other.style.bottom = 0;
+    } else{
+        index.style.top = 0;
+        other.style.bottom = '100%';
+    }
+    H = 0;
+})
 
+other.addEventListener('click',function (e) {
+    index.style.display = 'block';
+    index.style.top = 0;
+    other.style.bottom = '100%';
 })
 
 // content.ondbclick = function(){
