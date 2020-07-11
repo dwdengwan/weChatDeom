@@ -163,25 +163,6 @@ iContent.addEventListener("click",function (e) {
         hChild += iChild[i].offsetHeight
     }
     if(hChild > hParent){
-        // if (timer) clearInterval(timer)
-        // timer = setInterval(()=>{
-        //     if (iContent.scrollTop + hParent < hChild){
-        //         // iContent.scrollTop += h;
-        //         iContent.scrollTop += 1;
-        //     }else if(iContent.scrollTop + hParent == hChild){
-        //         // iContent.scrollTop -= 1;
-        //         clearInterval(timer)
-        //         setTimeout(()=>{
-        //             // iContent.scrollTop = 0;
-        //             timer = setInterval(()=>{
-        //                 iContent.scrollTop -= 1;
-        //                 if (iContent.scrollTop == 0){
-        //                     clearInterval(timer)
-        //                 }
-        //             },10)
-        //         },3000)
-        //     }
-        // },10)
         cycle(hParent,hChild)
     }
 })
