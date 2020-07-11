@@ -1,0 +1,43 @@
+.book-content{
+    width: 100%;
+    padding:2% 0;
+    position: relative;
+}
+.book-content-child{
+    height: 8%;
+    width: 96%;
+    padding: 0 2%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.book-content-child .book-content-img{
+    width: 30px;
+    height: 30px;
+    background: #f0f;
+    border-radius: 50%;
+}
+.book-content-child .book-content-name{
+    margin-left: 20px;
+}
+.book-content .book-content-kongge{
+    height: 4%;
+    width: 96%;
+    padding: 0 2%;
+    background: rgba(100,100,100,.5);
+    font-size: 16px;
+    font-weight: bold;
+}
+.fix{
+    position: absolute;
+    width: 10%;
+    height: 84%;
+    top: 8%;
+    right: 0;
+}
+.fix .clickLi{
+    cursor: pointer;
+}
+.fix .clickLi.active{
+    color:#fff;
+}

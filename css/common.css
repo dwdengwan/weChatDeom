@@ -72,3 +72,7 @@ a{
     text-decoration:none;
     color:#000;
 }
+ul li{
+    list-style-type:none;
+    text-align: center;
+}
