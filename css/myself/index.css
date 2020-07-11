@@ -1,0 +1,8 @@
+.myself .myself-content .myself-content-child{
+    height: 16%;
+}
+.myself .myself-content .myself-content-child .found-content-left .found-content-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 0;
+}
