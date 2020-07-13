@@ -1,0 +1,35 @@
+.game-content{
+    position: relative;
+}
+.game-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 45px;
+    background: rgba(100,50,200,.6);
+}
+.game-footer .game-footer-left{
+    width: 0;
+    height: 0;
+    border: 25px solid;
+    border-color: transparent  transparent transparent #f0f  ;
+}
+.game-footer .game-footer-right{
+    width: 0;
+    height: 0;
+    border: 25px solid;
+    border-color: transparent transparent #f0f;
+}
+.game-footer .game-footer-up{
+    width: 0;
+    height: 0;
+    border: 25px solid;
+    border-color: transparent #f0f transparent transparent ;
+}
+.game-footer .game-footer-down{
+    width: 0;
+    height: 0;
+    border: 25px solid;
+    border-color: #f0f transparent transparent transparent;
+}
