@@ -1,3 +1,6 @@
+.wechat{
+    /*opacity: 0.2;*/
+}
 .wechat-header .wechat-back,.wechat-header .wechat-share{
     font-size: 18px;
 }
@@ -63,12 +66,12 @@
     font-size:16px;
 }
 
-
 .main{
     transform: rotate(225deg);
     position: absolute;
-    top: 50%;
-    left: 50%;
+    /*top: 50%;*/
+    /*left: 50%;*/
+    display: none;
  }
 .disc1{
     width: 26px;

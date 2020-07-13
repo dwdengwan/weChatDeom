@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="音乐播放器播放两首歌">
+    <meta name="description" content="手机大小的简单的音乐播放器播放两首歌">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>朋友圈</title>
+    <link rel="stylesheet" href="../../../weChatDeom/css/common.css" type="text/css">
+    <style type="text/css">
+        *{margin:0px;padding:0px;}
+        body{background:#000000;}
+        #phone{
+            position:relative;
+            height: 94%;
+            width: 100%;
+            padding: 0;
+            /*width:322px;*/
+            /*height:640px;*/
+            /*margin:20px auto;*/
+             background:#000;
+        }
+        .top{
+            /*width:322px;*/
+            width: 80%;
+            margin-left: 10%;
+            height:42px;
+        }
+        .info{
+            /*width:322px;*/
+            width: 80%;
+            margin-left: 10%;
+            height:20px;
+        }
+        h2.song_title{
+            /*width:320px;*/
+            width: 80%;
+            margin-left: 10%;
+            height:40px;
+            background:#000000;
+            color:#ffffff;
+            text-align:center;
+            line-height:40px;
+            border-right:1px solid #ffffff;
+            border-left:1px solid #ffffff;
+        }
+        .song_lrc{
+            /*width:320px;*/
+            width: 80%;
+            margin-left: 10%;
+            height:540px;
+            background-size:cover;
+            border-right:1px solid #ffffff;
+            border-left:1px solid #ffffff;
+            overflow:hidden;
+        }
+        .song_lrc p{
+            height:20px;
+            line-height:20px;
+            font-size:14px;
+            font-weight:bold;
+            text-align:center;
+            color:#625959;
+        }
+        /*.footer{*/
+            /*!*width:322px;*!*/
+            /*width: 100%;*/
+            /*height:47px;*/
+        /*}*/
+        #btn{
+            position:absolute;
+            left:180px;
+            bottom:50px;
+            width:50px;
+            height:50px;
+            border-radius: 50%;
+            background-color:rgba(255,255,255,.5) ;
+            background-size:100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color:#fff
+        }
+        #btn #btnstop{
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 20px solid rgba(255,255,255,.5);
+            margin-left:10px;
+        }
+        #btn #btnstart{
+            display: none;
+        }
+        .rotate{
+            animation:rot 5s linear infinite;
+            /*CSS3自定义动画：名称 时间 匀速运动 无限重复*/
+        }
+        @keyframes rot{/*CSS3变换：旋转*/
+            from{transform:rotate(0deg);}
+            to{transform:rotate(360deg);}
+        }
+        #content{
+            position:relative;
+            top:0;
+        }
+    </style>
+
+</head>
+<body>
+<div class="all">
+    <div class="header">
+        <span class="wechat-back">
+            <a href="./index.html">&lt;</a>
+            <span class="wechat-header-name">刚好遇见你</span>
+        </span>
+    </div>
+    <div id="phone" class="content">
+        <div class="top"></div>
+        <div class="info"></div>
+        <h2 class="song_title">刚好遇见你</h2>
+        <div class="song_lrc">
+            <div id="content"></div>
+        </div>
+        <!--<div class="footer"></div>-->
+        <div id="btn" class="">
+            <div id="btnstop"></div>
+            <div id="btnstart">| |</div>
+        </div>
+    </div>
+</div>
+<!--HTML5音频播放标签-->
+<audio src="music/李玉刚-刚好遇见你.mp3" id="myMusic"></audio>
+<textarea id="text" style="display:none">
+        [00:00.95]刚好遇见你 - 李玉刚
+        [00:02.74]作词：高进
+        [00:03.70]作曲：高进
+        [00:04.75]编曲：关天天
+        [00:12.56]我们哭了
+        [00:15.27]我们笑着
+        [00:18.60]我们抬头望天空
+        [00:21.43]星星还亮着几颗
+        [00:24.63]我们唱着
+        [00:27.56]时间的歌
+        [00:30.62]才懂得相互拥抱
+        [00:34.00]到底是为了什么
+        [00:36.94]因为我刚好遇见你
+        [00:40.32]留下足迹才美丽
+        [00:43.69]风吹花落泪如雨
+        [00:46.48]因为不想分离
+        [00:49.57]因为刚好遇见你
+        [00:52.59]留下十年的期许
+        [00:55.69]如果再相遇
+        [00:59.15]我想我会记得你
+        [01:14.28]我们哭了
+        [01:16.88]我们笑着
+        [01:20.29]我们抬头望天空
+        [01:22.96]星星还亮着几颗
+        [01:26.11]我们唱着
+        [01:29.11]时间的歌
+        [01:32.56]才懂得相互拥抱
+        [01:35.36]到底是为了什么
+        [01:38.47]因为我刚好遇见你
+        [01:41.84]留下足迹才美丽
+        [01:44.83]风吹花落泪如雨
+        [01:47.97]因为不想分离
+        [01:51.02]因为刚好遇见你
+        [01:54.09]留下十年的期许
+        [01:57.23]如果再相遇
+        [02:00.69]我想我会记得你
+        [02:03.69]因为刚好遇见你
+        [02:06.43]留下足迹才美丽
+        [02:09.57]风吹花落泪如雨
+        [02:12.64]因为不想分离
+        [02:15.76]因为刚好遇见你
+        [02:18.78]留下十年的期许
+        [02:21.83]如果再相遇
+        [02:24.98]我想我会记得你
+        [02:31.07]因为我刚好遇见你
+        [02:34.13]留下足迹才美丽
+        [02:37.25]风吹花落泪如雨
+        [02:40.37]因为不想分离
+        [02:43.43]因为刚好遇见你
+        [02:46.48]留下十年的期许
+        [02:49.58]如果再相遇
+        [02:52.67]我想我会记得你
+    </textarea>
+
+
+<script type="text/javascript">
+    var myMusic=document.getElementById("myMusic");
+    var btn=document.getElementById("btn");
+    var btnStart = document.getElementById('btnstart');
+    var btnStop = document.getElementById('btnstop');
+    var txt=document.getElementById("text");
+    var con=document.getElementById("content");
+    var phone = document.getElementById('phone')
+
+    var onOff=true;//开关记录播放状态
+    phone.addEventListener('click',function (e) {
+        if(onOff==true){
+            btnStart.style.display = "block";
+            btnStop.style.display = 'none';
+            // myMusic.play();
+            // this.className="rotate";
+        }else{
+            // myMusic.pause();
+            // this.className="";
+            btnStart.style.display = "none";
+            btnStop.style.display = 'block';
+        }
+        onOff=!onOff;
+    })
+
+    btn.addEventListener('click',function (e) {
+        e.stopPropagation()
+        if(onOff==true){
+            myMusic.play();
+            btnStart.style.display = "block";
+            btnStop.style.display = 'none';
+            // this.className="rotate";
+        }else{
+            myMusic.pause();
+            // this.className="";
+            btnStart.style.display = "none";
+            btnStop.style.display = 'block';
+        }
+        onOff=!onOff;
+    })
+
+    var html='';//定义一个空变量来存储歌词的词部分
+    //console.log(txt.value);//获取歌词部分，包括[时间]+词
+    var lrc=txt.value.split("[");//获取歌词并从[切割开    //console.log(lrc);//测试lrc是什么
+
+    //循环遍历到每句歌词
+    for(var i=0;i<lrc.length;i++){//console.log(lrc[i]);//测试lrc数组每个元素
+        var arr=lrc[i].split("]");//从]切割，这样时间和词就切割开来了
+        //console.log(arr[1]);//arr[0]是时间，arr[1]是词，时间形如分秒毫秒00:36.94
+
+        var t=arr[0].split(".");//将分秒和毫秒分割开
+        var ti=t[0].split(":");
+        var time=ti[0]*60+ti[1]*1;//获取歌词时间，注意，如果没有*1，将会是字符串拼接
+
+        if(arr[1]){//如果词不为空或undefined(分割之后可能会有空格或undefined)
+            html+="<p id="+time+">"+arr[1]+"</p>";
+        }
+    }
+    con.innerHTML=html;
+
+    var allP=document.getElementsByTagName("p");//获取所有的p标签，这样再播完某句歌词的时候该歌词可以恢复原来的样式
+    var num=0;//记录歌词移动的次数，因为歌词要往上移动，那么就要不断重新设置所对应容器的top值
+    //console.log(parseInt(this.currentTime));//当前播放时间
+
+    //歌词同步
+    myMusic.addEventListener("timeupdate",function(){
+        var currTime=parseInt(this.currentTime);
+
+        //让当前播放的歌词变色、增大
+        if(document.getElementById(currTime)){//先把所有的p标签内容改为原来的颜色
+            for(var i=0;i<allP.length;i++){
+                allP[i].style.color="#625959";
+                allP[i].style.fontSize="14px";
+            }
+            document.getElementById(currTime).style.color="#ff0000";
+            document.getElementById(currTime).style.fontSize="18px";
+
+            if(allP[9+num].id==currTime){//唱到第9行之后，每唱完一句歌词往上移一个行高即top减20px
+                con.style.top=-num*20+"px";
+                num++;
+            }
+        }
+    });
+
+    //监听歌曲是否播完
+    myMusic.addEventListener("ended",function(){
+        btn.className="";
+        onOff=true;//把开关更改为初始状态
+        con.style.top=0;//把歌词变回初始位置
+        num=0;//把歌词同步相关的num值改为初始状态
+        this.currentTime=0;//把当前歌曲的进度改为初始状态
+    })
+</script>
+</body>
+</html>
