@@ -1,27 +1,97 @@
-.wechat{
-    width: 100%;
-    height: 100%;
-}
-.wechat-header{
-    width: 96%;
-    height: 6%;
-    background: #0f0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2%;
-}
 .wechat-header .wechat-back,.wechat-header .wechat-share{
-    font-size: 80px;
+    font-size: 18px;
 }
-
-.wechat-body{
-    width: 100%;
-    height: 86%;
-    background: #f00;
+.wechat-body-child .wechat-body-time{
+    text-align: center;
+    font-size: 14px;
+    color:#eee;
+}
+.wechat-body-child .wechat-body-yourself{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.wechat-body-child .wechat-body-yourself .wechat-body-yourself-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+}
+.wechat-body-child .wechat-body-yourself .wechat-body-yourself-content{
+    padding: 1%;
+    background: #fff;
+    color:#000;
+    margin-left: 10px;
+}
+.wechat-body-child .wechat-body-myself {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 16px;
+}
+.wechat-body-child .wechat-body-myself .wechat-body-myself-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #095;
+}
+.wechat-body-child .wechat-body-myself .wechat-body-myself-content{
+    padding: 1%;
+    background: #095;
+    color:#000;
+    margin-right: 10px;
 }
 .wechat-footer{
     width: 100%;
     height: 8%;
     background: #00f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.wechat-footer .wechat-footer-input{
+    width: 60%;
+    height: 70%;
+    font-size: 16px;
+}
+.wechat-footer .wechat-footer-send{
+    width: 20%;
+    height: 70%;
+    font-size:16px;
+}
+
+
+.main{
+    transform: rotate(225deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+ }
+.disc1{
+    width: 26px;
+    height: 26px;
+    border:1px solid #00ff00;
+    background-color: #00ff00;
+    border-radius: 50%;
+    position: absolute;
+    margin:0px 0px 0px 13px;
+}
+.disc2{
+    width: 26px;
+    height: 26px;
+    border:1px solid #00ff00;
+    border-radius:50%;
+    background: #0f0;
+    position: absolute;
+    margin:13px 0px 0px 0px ;
+}
+.square{
+    width: 26px;
+    height: 26px;
+    border:1px solid #00ff00;
+    background-color: #00ff00;
+    position: absolute;
 }
