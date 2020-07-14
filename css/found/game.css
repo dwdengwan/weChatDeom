@@ -1,5 +1,6 @@
 .game-content{
     position: relative;
+    height:69.5%;
 }
 .game-child{
     position: absolute;
@@ -9,27 +10,87 @@
     height: 45px;
     background: rgba(100,50,200,.6);
 }
+.game-footer{
+    height: 22%;
+}
+.game-footer .game-footer-oper{
+    width: 120px;
+    height: 120px;
+    background: #009955;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.game-footer .game-footer-oper .game-oper-top,
+.game-footer .game-footer-oper .game-oper-middle,
+.game-footer .game-footer-oper .game-oper-buttom,
+.game-footer .game-footer-stop,
+.game-footer .game-footer-start{
+    display: flex;
+    align-items: center;
+}
+.game-footer .game-footer-oper .game-oper-top,
+.game-footer .game-footer-oper .game-oper-buttom{
+    justify-content: center;
+}
+.game-footer .game-footer-oper .game-oper-middle{
+    justify-content: space-between;
+}
+.game-footer .game-footer-stop,
+.game-footer .game-footer-start{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #095;
+}
+.game-footer .game-footer-start{
+    justify-content: center;
+}
+.game-footer .game-footer-stop{
+    justify-content: space-around;
+}
+.game-footer .game-footer-start .game-footer-left{
+    margin-left: 10px;
+}
+.game-footer .game-footer-stop .game-stop-left,
+.game-footer .game-footer-stop .game-stop-right{
+    width: 10px;
+    height: 30px;
+    background: #f0f;
+}
+.game-footer .game-footer-stop .game-stop-left{
+    margin-right: 10px;
+}
+.game-footer .game-footer-stop .game-stop-right{
+    margin-left: 10px;
+}
 .game-footer .game-footer-left{
-    width: 0;
-    height: 0;
-    border: 25px solid;
-    border-color: transparent  transparent transparent #f0f  ;
+    width:0;
+    height:0;
+    border-top:20px solid transparent;
+    border-bottom:20px solid transparent;
+    border-left:30px solid #f0f;
 }
 .game-footer .game-footer-right{
-    width: 0;
-    height: 0;
-    border: 25px solid;
-    border-color: transparent transparent #f0f;
+    width:0;
+    height:0;
+    border-top:20px solid transparent;
+    border-bottom:20px solid transparent;
+    border-right:30px solid #f0f;
 }
 .game-footer .game-footer-up{
-    width: 0;
-    height: 0;
-    border: 25px solid;
-    border-color: transparent #f0f transparent transparent ;
+    width:0;
+    height:0;
+    border-left:20px solid transparent;
+    border-right:20px solid transparent;
+    border-bottom:30px solid #f0f;
 }
 .game-footer .game-footer-down{
-    width: 0;
-    height: 0;
-    border: 25px solid;
-    border-color: #f0f transparent transparent transparent;
+    width:0;
+    height:0;
+    border-left:20px solid transparent;
+    border-right:20px solid transparent;
+    border-top:30px solid #f0f;
 }
