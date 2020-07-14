@@ -1,0 +1,111 @@
+.wellgame-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wellgame-content .wellgame-content-parent{
+    width: 380px;
+    height: 380px;
+    background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap:wrap;
+    align-content: flex-start;
+}
+.wellgame-content .wellgame-content-parent .wellgame-content-child{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    margin-right: 0;
+    text-align: center;
+    line-height: 100px;
+}
+.wellgame-content .wellgame-content-parent .wellgame-content-child.normal{
+    background: cyan;
+}
+.wellgame-content .wellgame-content-parent .wellgame-content-child.myself{
+    background: lime;
+}
+.wellgame-content .wellgame-content-parent .wellgame-content-child.itself{
+    background: magenta;
+}
+
+.wellgame-footer .wellgame-footer-start,
+.wellgame-footer .wellgame-footer-reset{
+    padding: 10px;
+    background: green;
+    color:#fff;
+    border-radius: 5px;
+}
+
+.wellgame-footer .wellgame-footer-reset{
+    background: orange;
+}
+
+.screen,.prompt{
+    position: absolute;
+    top:6%;
+    left:0;
+    width: 100%;
+    /*height: 86%;*/
+    height: 94%;
+    background: rgba(100,100,100,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.screen-parent,.prompt-content{
+    width: 190px;
+    height: 100px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+.prompt-content.error{
+    color:red;
+    font-weight: bold;
+}
+.screen-parent .screen-select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.screen-parent .screen-select .screen-select-left{
+
+}
+.screen-parent .screen-select .screen-select-middle{
+    margin-left: 10px;
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    border: 2px solid #095;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.screen-parent .screen-select .screen-select-middle .screen-select-round{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #095;
+}
+.screen-parent .screen-select .screen-select-right{
+    margin-left: 10px;
+}
+.screen-parent .screen-begain{
+    padding: 10px;
+    text-align: center;
+    background: #009955;
+    border-radius: 10px;
+    color:#fff;
+    width: 50%;
+    margin-left: 20%;
+}

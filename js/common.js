@@ -1,3 +1,5 @@
+var timeout = null;
+
 function common(dyk){
     alert(dyk)
 }
@@ -158,4 +160,10 @@ function weekDay(n) {
             return '周八'
             break
     }
+}
+
+/*防抖*/
+function debounce(fn, wait) {
+    if (timeout !== null) clearTimeout(timeout);
+    timeout = setTimeout(fn, wait);
 }

@@ -47,6 +47,7 @@
 }
 .game-footer .game-footer-start{
     justify-content: center;
+    display: none;
 }
 .game-footer .game-footer-stop{
     justify-content: space-around;
