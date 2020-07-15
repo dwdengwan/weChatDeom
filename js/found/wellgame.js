@@ -11,8 +11,7 @@ var myselfStr = '';
 var itselfStr = '';
 var timer = null;
 var flag = false;//true我方先 false电脑先
-var ismyselfWin = false;//true 我方赢
-var isitselfWin = false;//true 电脑方赢
+var isWin = false;//游戏赢了 结束
 var isBegain = false;//游戏是否开始
 //debounce 防抖
 //重置
@@ -25,9 +24,8 @@ function resetFn(){
     }
     screen.style.display = 'none';
     arr = [0,1,2,3,4,5,6,7,8];
-    ismyselfWin = false;
+    isWin = false;
     myselfStr = '';
-    isitselfWin = false;
     itselfStr = '';
 }
 
@@ -88,7 +86,7 @@ function itFirstRun() {
     // child[j].innerHTML = '电脑点击的'
     child[j].innerHTML = `<div class="cha"></div>`
     arr.splice(j,1,9)
-    myselfWin(itselfStr,isitselfWin,9)
+    myselfWin(itselfStr,9)
     if (brr.length == 0){
         adviceInfo('游戏已结束')
         return
@@ -100,14 +98,6 @@ function runInfo(i){
     // flag
     if (!isBegain){
         adviceInfo('游戏暂未开始')
-        return
-    }
-    if (ismyselfWin){
-        adviceInfo('您赢了，请重新开始游戏')
-        return
-    }
-    if (isitselfWin){
-        adviceInfo('您输了，请重新开始游戏')
         return
     }
     if (arr[i] == -1){
@@ -123,17 +113,15 @@ function runInfo(i){
     child[i].innerHTML = `<div class="container"></div>`
     myClick(arr[i])
     arr.splice(i,1,-1)
-    myselfWin(myselfStr,ismyselfWin,-1)
-    console.log(ismyselfWin)
-    if(ismyselfWin){
-        console.log('99'+ismyselfWin)
+    myselfWin(myselfStr,-1)
+    if(isWin){
         return
     }
     itFirstRun()
 }
 
 //判断我方赢
-function myselfWin(myselfStr,ismyselfWin,num){
+function myselfWin(myselfStr,num){
     let myselfArr = [];
     arr.forEach((item,i,arr)=>{
         if (item == num){
@@ -141,7 +129,7 @@ function myselfWin(myselfStr,ismyselfWin,num){
             myselfStr = myselfArr.join('')
         }
     })
-    ismyselfWin = ( myselfStr.indexOf('0') > -1 && myselfStr.indexOf('1') > -1 && myselfStr.indexOf('2') > -1 )  ||
+    isWin = ( myselfStr.indexOf('0') > -1 && myselfStr.indexOf('1') > -1 && myselfStr.indexOf('2') > -1 )  ||
                ( myselfStr.indexOf('3') > -1 && myselfStr.indexOf('4') > -1 && myselfStr.indexOf('5') > -1 )  ||
                ( myselfStr.indexOf('6') > -1 && myselfStr.indexOf('7') > -1 && myselfStr.indexOf('8') > -1 )  ||
                ( myselfStr.indexOf('0') > -1 && myselfStr.indexOf('3') > -1 && myselfStr.indexOf('6') > -1 )  ||
@@ -149,13 +137,11 @@ function myselfWin(myselfStr,ismyselfWin,num){
                ( myselfStr.indexOf('2') > -1 && myselfStr.indexOf('5') > -1 && myselfStr.indexOf('8') > -1 )  ||
                ( myselfStr.indexOf('0') > -1 && myselfStr.indexOf('4') > -1 && myselfStr.indexOf('8') > -1 )  ||
                 ( myselfStr.indexOf('2') > -1 && myselfStr.indexOf('4') > -1 && myselfStr.indexOf('6') > -1 )
-    console.log(ismyselfWin,myselfStr,num)
-    if (ismyselfWin && num == -1){
+    console.log(isWin,myselfStr,num)
+    if (isWin && num == -1){
         adviceInfo('您赢了')
-        return
-    }else if(ismyselfWin && num == 9){
+    }else if(isWin && num == 9){
         adviceInfo('您输了')
-        return
     }
 }
 
@@ -168,7 +154,7 @@ function itselfWin(){
 function adviceInfo(text){
     prompt.style.display = 'flex'
     pContent.innerText = text
-    if (ismyselfWin){
+    if (isWin){
         pContent.style.color = 'green'
     }
 }
