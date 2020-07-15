@@ -59,6 +59,10 @@ function isMyself(){
 function begainFc(){
     isBegain = true;
     resetFn()
+    console.log(flag)
+    if (!flag){
+        itFirstRun()
+    }
 }
 
 //游戏结束
@@ -66,8 +70,34 @@ function endGame(){
     isBegain = false;
 }
 
+//电脑先下
+function itFirstRun() {
+    let brr = [];
+    arr.forEach((item,j,arr)=>{
+        if (item !== -1 && item !== 9){
+            brr.push(item)
+        }
+    })
+    let j = parseInt(Math.random()*(brr.length));
+    j = brr[j]
+    if (brr.length == 0){
+        adviceInfo('游戏已结束')
+        return
+    }
+    itClick(arr[j])
+    // child[j].innerHTML = '电脑点击的'
+    child[j].innerHTML = `<div class="cha"></div>`
+    arr.splice(j,1,9)
+    myselfWin(itselfStr,isitselfWin,9)
+    if (brr.length == 0){
+        adviceInfo('游戏已结束')
+        return
+    }
+}
+
 //运行信息
 function runInfo(i){
+    // flag
     if (!isBegain){
         adviceInfo('游戏暂未开始')
         return
@@ -81,11 +111,11 @@ function runInfo(i){
         return
     }
     if (arr[i] == -1){
-        adviceInfo('您已经点击过了')
+        // adviceInfo('您已经点击过了')
         return
     }
     if (arr[i] == 9){
-        adviceInfo('电脑已经点击过了')
+        // adviceInfo('电脑已经点击过了')
         return
     }
     clearTimeout(timer)
@@ -94,27 +124,12 @@ function runInfo(i){
     myClick(arr[i])
     arr.splice(i,1,-1)
     myselfWin(myselfStr,ismyselfWin,-1)
-    let brr = [];
-    arr.forEach((item,j,arr)=>{
-        if (item !== -1 && item !== 9){
-            brr.push(item)
-        }
-    })
-    let j = parseInt(Math.random()*(brr.length));
-    j = brr[j]
-    if (brr.length == 0){
-        adviceInfo('游戏已结束')
+    console.log(ismyselfWin)
+    if(ismyselfWin){
+        console.log('99'+ismyselfWin)
         return
     }
-    // timer = setTimeout(()=>{
-    if (!ismyselfWin){
-        itClick(arr[j])
-        // child[j].innerHTML = '电脑点击的'
-        child[j].innerHTML = `<div class="cha"></div>`
-        arr.splice(j,1,9)
-        myselfWin(itselfStr,isitselfWin,9)
-    }
-    // },2000)
+    itFirstRun()
 }
 
 //判断我方赢
@@ -134,7 +149,7 @@ function myselfWin(myselfStr,ismyselfWin,num){
                ( myselfStr.indexOf('2') > -1 && myselfStr.indexOf('5') > -1 && myselfStr.indexOf('8') > -1 )  ||
                ( myselfStr.indexOf('0') > -1 && myselfStr.indexOf('4') > -1 && myselfStr.indexOf('8') > -1 )  ||
                 ( myselfStr.indexOf('2') > -1 && myselfStr.indexOf('4') > -1 && myselfStr.indexOf('6') > -1 )
-    console.log(ismyselfWin,myselfStr)
+    console.log(ismyselfWin,myselfStr,num)
     if (ismyselfWin && num == -1){
         adviceInfo('您赢了')
         return
@@ -169,6 +184,7 @@ reset.addEventListener('click',function (e) {
 })
 
 middle.addEventListener('click',function (e) {
+    console.log(flag)
     debounce(isMyself,500)
 })
 
@@ -178,6 +194,7 @@ begain.addEventListener('click',function (e) {
 
 prompt.addEventListener('click',function (e) {
     prompt.style.display = 'none';
+    resetFn()
 })
 
 for(let i = 0;i<child.length;i++){
