@@ -23,6 +23,9 @@
     margin-right: 0;
     text-align: center;
     line-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .wellgame-content .wellgame-content-parent .wellgame-content-child.normal{
     background: cyan;
@@ -32,6 +35,37 @@
 }
 .wellgame-content .wellgame-content-parent .wellgame-content-child.itself{
     background: magenta;
+}
+
+.wellgame-content .wellgame-content-parent .wellgame-content-child .container {
+    width: 20px;
+    height: 40px;
+    border-color: rgb(19, 200, 54);
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    transform: rotate(45deg);
+}
+.wellgame-content .wellgame-content-parent .wellgame-content-child .cha{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    position: relative;
+}
+.wellgame-content .wellgame-content-parent .wellgame-content-child .cha::before,
+.wellgame-content .wellgame-content-parent .wellgame-content-child .cha::after{
+    content: "";
+    position: absolute;  /*方便进行定位*/
+    height: 50px;
+    width: 10px;
+    top: 0px;
+    right: 20px;  /*设置top和right使图像在20*20框中居中*/
+    background: #f39800;
+}
+.wellgame-content .wellgame-content-parent .wellgame-content-child .cha::before{
+    transform: rotate(45deg);  /*进行旋转*/
+}
+.wellgame-content .wellgame-content-parent .wellgame-content-child .cha::after{
+    transform: rotate(-45deg);
 }
 
 .wellgame-footer .wellgame-footer-start,
@@ -54,7 +88,7 @@
     /*height: 86%;*/
     height: 94%;
     background: rgba(100,100,100,.5);
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
     display: none;
@@ -68,10 +102,13 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
+    font-weight: bold;
 }
 .prompt-content.error{
     color:red;
-    font-weight: bold;
+}
+.prompt-content.success{
+    color:green;
 }
 .screen-parent .screen-select{
     display: flex;

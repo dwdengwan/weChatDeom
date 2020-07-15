@@ -7,8 +7,12 @@ var begain = document.getElementById('begain');
 var prompt = document.getElementById('prompt');
 var pContent = document.getElementById('pContent');
 var arr = [0,1,2,3,4,5,6,7,8];
+var myselfStr = '';
+var itselfStr = '';
 var timer = null;
 var flag = false;//true我方先 false电脑先
+var ismyselfWin = false;//true 我方赢
+var isitselfWin = false;//true 电脑方赢
 var isBegain = false;//游戏是否开始
 //debounce 防抖
 //重置
@@ -21,6 +25,10 @@ function resetFn(){
     }
     screen.style.display = 'none';
     arr = [0,1,2,3,4,5,6,7,8];
+    ismyselfWin = false;
+    myselfStr = '';
+    isitselfWin = false;
+    itselfStr = '';
 }
 
 //我方点击
@@ -58,6 +66,98 @@ function endGame(){
     isBegain = false;
 }
 
+//运行信息
+function runInfo(i){
+    if (!isBegain){
+        adviceInfo('游戏暂未开始')
+        return
+    }
+    if (ismyselfWin){
+        adviceInfo('您赢了，请重新开始游戏')
+        return
+    }
+    if (isitselfWin){
+        adviceInfo('您输了，请重新开始游戏')
+        return
+    }
+    if (arr[i] == -1){
+        adviceInfo('您已经点击过了')
+        return
+    }
+    if (arr[i] == 9){
+        adviceInfo('电脑已经点击过了')
+        return
+    }
+    clearTimeout(timer)
+    // child[i].innerHTML = '我点击的'
+    child[i].innerHTML = `<div class="container"></div>`
+    myClick(arr[i])
+    arr.splice(i,1,-1)
+    myselfWin(myselfStr,ismyselfWin,-1)
+    let brr = [];
+    arr.forEach((item,j,arr)=>{
+        if (item !== -1 && item !== 9){
+            brr.push(item)
+        }
+    })
+    let j = parseInt(Math.random()*(brr.length));
+    j = brr[j]
+    if (brr.length == 0){
+        adviceInfo('游戏已结束')
+        return
+    }
+    // timer = setTimeout(()=>{
+    if (!ismyselfWin){
+        itClick(arr[j])
+        // child[j].innerHTML = '电脑点击的'
+        child[j].innerHTML = `<div class="cha"></div>`
+        arr.splice(j,1,9)
+        myselfWin(itselfStr,isitselfWin,9)
+    }
+    // },2000)
+}
+
+//判断我方赢
+function myselfWin(myselfStr,ismyselfWin,num){
+    let myselfArr = [];
+    arr.forEach((item,i,arr)=>{
+        if (item == num){
+            myselfArr.push(i);
+            myselfStr = myselfArr.join('')
+        }
+    })
+    ismyselfWin = ( myselfStr.indexOf('0') > -1 && myselfStr.indexOf('1') > -1 && myselfStr.indexOf('2') > -1 )  ||
+               ( myselfStr.indexOf('3') > -1 && myselfStr.indexOf('4') > -1 && myselfStr.indexOf('5') > -1 )  ||
+               ( myselfStr.indexOf('6') > -1 && myselfStr.indexOf('7') > -1 && myselfStr.indexOf('8') > -1 )  ||
+               ( myselfStr.indexOf('0') > -1 && myselfStr.indexOf('3') > -1 && myselfStr.indexOf('6') > -1 )  ||
+               ( myselfStr.indexOf('1') > -1 && myselfStr.indexOf('4') > -1 && myselfStr.indexOf('7') > -1 )  ||
+               ( myselfStr.indexOf('2') > -1 && myselfStr.indexOf('5') > -1 && myselfStr.indexOf('8') > -1 )  ||
+               ( myselfStr.indexOf('0') > -1 && myselfStr.indexOf('4') > -1 && myselfStr.indexOf('8') > -1 )  ||
+                ( myselfStr.indexOf('2') > -1 && myselfStr.indexOf('4') > -1 && myselfStr.indexOf('6') > -1 )
+    console.log(ismyselfWin,myselfStr)
+    if (ismyselfWin && num == -1){
+        adviceInfo('您赢了')
+        return
+    }else if(ismyselfWin && num == 9){
+        adviceInfo('您输了')
+        return
+    }
+}
+
+//判断电脑方赢
+function itselfWin(){
+
+}
+
+//提示信息
+function adviceInfo(text){
+    prompt.style.display = 'flex'
+    pContent.innerText = text
+    if (ismyselfWin){
+        pContent.style.color = 'green'
+    }
+}
+
 start.addEventListener('click',function (e) {
     console.log('start')
     screen.style.display = 'flex';
@@ -82,40 +182,7 @@ prompt.addEventListener('click',function (e) {
 
 for(let i = 0;i<child.length;i++){
     child[i].addEventListener('click',function (e) {
-        if (!isBegain){
-            prompt.style.display = 'flex'
-            pContent.innerText = '游戏暂未开始'
-            return
-        }
-        if (arr[i] == -1){
-            prompt.style.display = 'flex'
-            pContent.innerText = '已经点被击过了'
-            return
-        }
-        clearTimeout(timer)
-        child[i].innerHTML = '我点击的'
-        myClick(arr[i])
-        arr.splice(i,1,-1)
-        let brr = [];
-        arr.forEach((item,j,arr)=>{
-            if (item !== -1){
-                brr.push(item)
-            }
-        })
-        let j = parseInt(Math.random()*(brr.length));
-        j = brr[j]
-        console.log(j,brr)
-        if (brr.length == 0){
-            prompt.style.display = 'flex'
-            pContent.innerText = '游戏已结束'
-            return
-        }
-        timer = setTimeout(()=>{
-            itClick(arr[j])
-            child[j].innerHTML = '电脑点击的'
-            arr.splice(j,1,-1)
-        },2000)
-        console.log(arr);
+        debounce(runInfo(i),2000)
     })
 }
 
