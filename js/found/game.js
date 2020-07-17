@@ -49,9 +49,11 @@ function runInfo(l) {
             }
             bool = nowArr[j] > 119
             if (bool){
-                clearInterval(timer)
+                // clearInterval(timer)
                 reset()
-                return
+                nowArr = [3,4,5,6];
+                runInfo(l)
+                // return
             }
         }
         l = 0;
@@ -72,16 +74,16 @@ function transform(num) {
             transformArr1.push(nowArr[1]+30)
             nowArr = transformArr1
             touchEdge()
-            if ((nowArr[1] + 30) > 110 && (nowArr[1] + 30) < 119){
-                let lastNum = nowArr[1] % 10
-                let transformArr1 = [];
-                transformArr1.push(lastNum + 80)
-                transformArr1.push(lastNum + 90)
-                transformArr1.push(lastNum + 100)
-                transformArr1.push(lastNum + 110)
-                nowArr = transformArr1
-                touchEdge()
-            }
+            // if ((nowArr[1] + 30) > 110 && (nowArr[1] + 30) < 119){
+            //     let lastNum = nowArr[1] % 10
+            //     let transformArr1 = [];
+            //     transformArr1.push(lastNum + 80)
+            //     transformArr1.push(lastNum + 90)
+            //     transformArr1.push(lastNum + 100)
+            //     transformArr1.push(lastNum + 110)
+            //     nowArr = transformArr1
+            //     touchEdge()
+            // }
             rand()
             // }
             break;
@@ -118,15 +120,15 @@ function touchEdge() {
             console.log('isButtom')
             isButtom  = true;
             clearInterval(timer)
-            // let transformArr = [];
-            // let lastNum = nowArr[1] % 10;
-            // transformArr.push(lastNum + 80)
-            // transformArr.push(lastNum + 90)
-            // transformArr.push(lastNum + 100)
-            // transformArr.push(lastNum + 110)
-            // nowArr = transformArr
-            // rand()
-            return
+            let transformArr = [];
+            let lastNum = nowArr[1] % 10;
+            transformArr.push(lastNum + 80)
+            transformArr.push(lastNum + 90)
+            transformArr.push(lastNum + 100)
+            transformArr.push(lastNum + 110)
+            nowArr = transformArr
+            rand()
+            // return
         }else if(item % 10 == 0){//触碰到左边
             console.log('isRight')
             isRight = true;
