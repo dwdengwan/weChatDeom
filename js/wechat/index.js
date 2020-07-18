@@ -1,7 +1,6 @@
 function log(text){
     console.log(text)
 }
-var time = document.getElementById('time');
 var index = document.getElementById('index');
 var other = document.getElementById('other');
 var content = document.getElementById('content');
@@ -10,6 +9,8 @@ var sContent = document.getElementById('sContent');
 var iContent = document.getElementById('iContent');
 var footer = document.getElementById('footer');
 var iChild = document.getElementsByClassName('index-content-child');
+var time = document.getElementsByClassName('index-content-time');
+var text = document.getElementsByClassName('index-content-child-span')
 var timer = null;//定时器
 var H = 0;//上下滑动的距离
 var targetT = 0;//上下滑动页面 当前y值
@@ -18,10 +19,33 @@ var folgT = false;//true上下滑动 flase左右滑动
 var targetL = 0;//左右滑动页面 当前x值
 var oldL = 0;//左右滑动页面 1ms前x值
 var L = 0;//左右滑动的距离
-// time.innerHTML = nowTime()
 
-console.log(nowTime())
-time.innerHTML = showDate()
+// time.innerHTML = nowTime()
+// time.innerHTML = showDate()
+
+for( let i = 0;i<18;i++){
+    iContent.innerHTML += `
+            <div class="index-content-child">
+                <div class="index-content-img"></div>
+                <div class="index-content-middle">
+                    <a href="./html/wechat/wechat.html?id=${i}">
+                        <div class="index-content-dd">
+                            <span class="index-content-name">测试${i}</span>
+                            <span class="index-content-time"></span>
+                        </div>
+                        <div class="index-content-child-lt">
+                            <span class="index-content-child-span"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>`;
+    time[i].innerHTML = showDate()
+    text[i].innerHTML = `我们${time[i].innerHTML}聊了些啥内容呢${i}`
+    // content.addEventListener('click',function (e) {
+    //     console.log('yk yk yk')
+    //     e.stopPropagation()
+    // })
+}
 
 index.addEventListener('touchstart',function (e) {
     // console.log('1',e.target.offsetTop,index.offsetHeight)
@@ -102,11 +126,6 @@ other.addEventListener('click',function (e) {
     index.style.display = 'block';
     index.style.top = 0;
     other.style.bottom = '100%';
-})
-
-content.addEventListener('click',function (e) {
-    console.log('yk yk yk')
-    e.stopPropagation()
 })
 
 // content.ondbclick = function(){

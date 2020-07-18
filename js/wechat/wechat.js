@@ -5,35 +5,114 @@ var wechat = document.getElementsByClassName('wechat')[0]
 
 var content = document.getElementById('content');
 var main = document.getElementById('main');
-var timer = null;
-var time = document.getElementById('time');
 var input = document.getElementById('input');
 var send = document.getElementById('send');
+var name = document.getElementsByClassName('wechat-header-name')[0];
+var time = document.getElementsByClassName('wechat-body-time');
+var myInput = document.getElementsByClassName('wechat-body-myself-content');
+var answer = document.getElementsByClassName('wechat-body-yourself-content');
+var child = document.getElementsByClassName('wechat-body-child')
+var height = 0;//文本内容的高度
+var timer = null;
+var timeout = null;
+var sendClickNum = 0;//发送按钮被点击的次数
 var opacity = 1;
+var html = `<div class="wechat-body-child">
+                <div class="wechat-body-time"></div>
+                <div class="wechat-body-myself">
+                    <div class="wechat-body-myself-content"></div>
+                    <div class="wechat-body-myself-img"></div>
+                </div>
+                <div class="wechat-body-yourself">
+                    <div class="wechat-body-yourself-img"></div>
+                    <div class="wechat-body-yourself-content"></div>
+                </div>
+            </div>`;
 
-content.addEventListener('click',function (e) {
-    console.log(e.screenX,e.screenY);
-    clearInterval(timer)
+input.focus()//输入框自动获取焦点
+
+let id = location.href.split('?')[1].split('=')[1]
+name.innerHTML = '测试'+id;
+console.log(id,name,name.innerHTML)
+
+//显示框里面的点击
+function contentClick(e){
+    clearInterval(timer);
+    clearTimeout(timeout);
     main.style.display = 'block';
-    main.style.opacity = 1;
+    main.style.opacity = 0;
     main.style.top = (e.screenY - 120) + 'px';
     main.style.left = (e.screenX - 70) + 'px';
-    opacity = 1;
+    opacity = 0;
     timer = setInterval(()=>{
-        opacity -= 0.02;
+        opacity += 0.02;
         main.style.opacity = opacity;
-        if (opacity < 0){
+        if (opacity > 1){
             clearInterval(timer)
-            main.style.display = 'none';
+            // main.style.display = 'block';
+            opacity = 1;
+            timeout = setTimeout(()=>{
+                timer = setInterval(()=>{
+                    opacity -= 0.02;
+                    main.style.opacity = opacity;
+                    if (opacity < 0){
+                        clearInterval(timer)
+                        main.style.display = 'none';
+                        opacity = 0;
+                    }
+                },100)
+            },2000)
         }
     },100)
-    // timer = setTimeout(()=>{
-    //     main.style.display = 'none';
-    // },3000)
+}
+
+//发送按钮
+function sendClick(e){
+    if (input.value == '') return
+    let oldTime = parseInt(localStorage.getItem('oldTime')) || 0;
+    let newTime = new Date().getTime();
+    content.innerHTML += html;
+    if(oldTime == 0 || (newTime - oldTime > 1000*60*3) || sendClickNum == 0){
+        time[sendClickNum].innerText = nowTime();
+    } else {
+        time[sendClickNum].innerText = '';
+    }
+    myInput[sendClickNum].innerText = input.value;
+    yourSay(sendClickNum)
+    height += child[sendClickNum].offsetHeight;
+    content.scrollTop = height;
+    console.log(height,content.scrollTop)
+    sendClickNum ++;
+    localStorage.setItem('oldTime',newTime)
+    input.value = '';
+    input.focus()
+}
+
+//对方回应语句
+function yourSay(n){
+    let text = input.value;
+    if(text.indexOf('你好') > -1){
+        answer[n].innerText = '谢谢你的问候，你也好呀。'
+    }else if(text.indexOf('在干什么') > -1){
+        answer[n].innerHTML = '吃饭，睡觉，打豆豆。';
+    }else{
+        answer[n].innerHTML = text;
+    }
+}
+
+content.addEventListener('click',function (e) {
+    contentClick(e)
 })
 
 send.addEventListener('click',function (e) {
-    console.log(input.value+'1111')
+    sendClick(e)
 })
 
-time.innerHTML = nowTime()
+input.addEventListener('keyup',function (e) {
+    if (e.keyCode == 13){
+        sendClick(e)
+        input.focus()
+    }
+})
+
+// time.innerHTML = nowTime()

@@ -9,7 +9,6 @@ function num(n) {
     if (parseInt(n) < 10){
         n = '0' + n
     }
-    console.log(n)
     return n
 }
 
@@ -65,13 +64,10 @@ function showDate(){
     //     oldTime = new Date().getTime();
     //     localStorage.setItem('oldtime',oldTime)
     // }
-    // console.log(oldTime)
     let oldTime = 1594301899668;
     let newTime = new Date().getTime();
     let apartTime = newTime - oldTime;
-    console.log(apartTime,newTime,oldTime)
     let date = nowTime(oldTime)
-    console.log(date)
     if (parseInt(apartTime) < (1000*60*60)){ //一小时内
         let min = parseInt(apartTime / (1000*60))
         return min + '分钟前'
@@ -99,31 +95,8 @@ function showDate(){
         }
     }else if (parseInt(apartTime) < (1000*60*60*24*7) && parseInt(apartTime) > (1000*60*60*24)){ //本周内
         // nowTime()
-        let weekDay = new Date(oldTime).getDay()
-        switch (weekDay){
-            case 0:
-                weekDay = '周日'
-                break;
-            case 1:
-                weekDay = '周一'
-                break;
-            case 2:
-                weekDay = '周二'
-                break;
-            case 3:
-                weekDay = '周三'
-                break;
-            case 4:
-                weekDay = '周四'
-                break;
-            case 5:
-                weekDay = '周五'
-                break;
-            case 6:
-                weekDay = '周六'
-                break;
-        }
-        return weekDay
+        let n = new Date(oldTime).getDay()
+        weekDay(n)
     }else if (parseInt(apartTime) > (1000*60*60*24*7) && parseInt(apartTime) < (1000*60*60*24*365)){ //今年内
         let mon = date.split('年')[1].split('日')[0]+'日'
         return mon

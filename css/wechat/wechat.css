@@ -4,12 +4,16 @@
 .wechat-header .wechat-back,.wechat-header .wechat-share{
     font-size: 18px;
 }
+.wechat-body-child {
+    width: 100%;
+}
 .wechat-body-child .wechat-body-time{
     text-align: center;
     font-size: 14px;
     color:#eee;
 }
 .wechat-body-child .wechat-body-yourself{
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -24,12 +28,15 @@
     background: #fff;
 }
 .wechat-body-child .wechat-body-yourself .wechat-body-yourself-content{
+    max-width: 70%;
+    word-break:break-all;
     padding: 1%;
     background: #fff;
     color:#000;
     margin-left: 10px;
 }
 .wechat-body-child .wechat-body-myself {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -42,9 +49,11 @@
     background: #095;
 }
 .wechat-body-child .wechat-body-myself .wechat-body-myself-content{
+    max-width: 70%;
+    word-break:break-all;
     padding: 1%;
     background: #095;
-    color:#000;
+    color:#fff;
     margin-right: 10px;
 }
 .wechat-footer{
