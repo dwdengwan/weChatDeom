@@ -2,6 +2,9 @@ var start = document.getElementById('start');
 var reset = document.getElementById('reset');
 var child = document.getElementsByClassName('wellgame-content-child');
 var screen = document.getElementsByClassName('screen')[0];
+var text = document.getElementsByClassName('prompt-text')[0]
+var confirm = document.getElementsByClassName('prompt-confirm')[0]
+var yes = document.getElementsByClassName('prompt-yes')[0]
 var middle = document.getElementById('middle');
 var begain = document.getElementById('begain');
 var prompt = document.getElementById('prompt');
@@ -16,17 +19,17 @@ var isBegain = false;//游戏是否开始
 //debounce 防抖
 //重置
 function resetFn(){
-    for (let i = 0;i<child.length;i++){
-        child[i].classList.add('normal');
-        child[i].classList.remove('myself');
-        child[i].classList.remove('itself');
-        child[i].innerHTML = '';
-    }
+    // for (let i = 0;i<child.length;i++){
+    //     child[i].classList.add('normal');
+    //     child[i].classList.remove('myself');
+    //     child[i].classList.remove('itself');
+    //     child[i].innerHTML = '';
+    // }
     screen.style.display = 'none';
-    arr = [0,1,2,3,4,5,6,7,8];
-    isWin = false;
-    myselfStr = '';
-    itselfStr = '';
+    // arr = [0,1,2,3,4,5,6,7,8];
+    // isWin = false;
+    // myselfStr = '';
+    // itselfStr = '';
 }
 
 //我方点击
@@ -57,7 +60,6 @@ function isMyself(){
 function begainFc(){
     isBegain = true;
     resetFn()
-    console.log(flag)
     if (!flag){
         itFirstRun()
     }
@@ -137,7 +139,6 @@ function myselfWin(myselfStr,num){
                ( myselfStr.indexOf('2') > -1 && myselfStr.indexOf('5') > -1 && myselfStr.indexOf('8') > -1 )  ||
                ( myselfStr.indexOf('0') > -1 && myselfStr.indexOf('4') > -1 && myselfStr.indexOf('8') > -1 )  ||
                 ( myselfStr.indexOf('2') > -1 && myselfStr.indexOf('4') > -1 && myselfStr.indexOf('6') > -1 )
-    console.log(isWin,myselfStr,num)
     if (isWin && num == -1){
         adviceInfo('您赢了')
     }else if(isWin && num == 9){
@@ -151,9 +152,10 @@ function itselfWin(){
 }
 
 //提示信息
-function adviceInfo(text){
+function adviceInfo(content){
     prompt.style.display = 'flex'
-    pContent.innerText = text
+    text.innerText = content;
+    confirm.style.display = 'none';
     if (isWin){
         pContent.style.color = 'green'
     }
@@ -161,12 +163,26 @@ function adviceInfo(text){
 
 start.addEventListener('click',function (e) {
     console.log('start')
+    if (isWin) {
+        adviceInfo('游戏已经结束了，是否重新开始？');
+        confirm.style.display = 'flex';
+        return
+    }
+    if (arr.indexOf(-1) > -1 || arr.indexOf(9) > -1){
+        adviceInfo('游戏已经开始了')
+        return
+    }
     screen.style.display = 'flex';
 })
 
 reset.addEventListener('click',function (e) {
-    console.log('reset')
-    resetFn()
+    if (arr.indexOf(-1) == -1 && arr.indexOf(9) == -1){
+        adviceInfo('游戏暂未开始，请先开始游戏')
+        return
+    }
+    adviceInfo('是否重置游戏？')
+    confirm.style.display = 'flex';
+    // resetFn()
 })
 
 middle.addEventListener('click',function (e) {
@@ -183,8 +199,27 @@ prompt.addEventListener('click',function (e) {
     resetFn()
 })
 
+yes.addEventListener('click',function (e) {
+    for (let i = 0;i<child.length;i++){
+        child[i].classList.add('normal');
+        child[i].classList.remove('myself');
+        child[i].classList.remove('itself');
+        child[i].innerHTML = '';
+    }
+    screen.style.display = 'none';
+    arr = [0,1,2,3,4,5,6,7,8];
+    isWin = false;
+    myselfStr = '';
+    itselfStr = '';
+})
+
 for(let i = 0;i<child.length;i++){
     child[i].addEventListener('click',function (e) {
+        if (isWin) {
+            adviceInfo('游戏已经结束了，是否重新开始？');
+            confirm.style.display = 'flex';
+            return
+        }
         debounce(runInfo(i),2000)
     })
 }

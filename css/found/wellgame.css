@@ -110,6 +110,25 @@
 .prompt-content.success{
     color:green;
 }
+.prompt-content .prompt-confirm{
+    /*display: flex;*/
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+}
+.prompt-content .prompt-confirm .prompt-yes,
+.prompt-content .prompt-confirm .prompt-no{
+    width: 25%;
+    padding: 1% 0;
+    border-radius: 10px;
+    color:#fff;
+}
+.prompt-content .prompt-confirm .prompt-yes{
+    background: #009955;
+}
+.prompt-content .prompt-confirm .prompt-no{
+    background: red;
+}
 .screen-parent .screen-select{
     display: flex;
     justify-content: center;

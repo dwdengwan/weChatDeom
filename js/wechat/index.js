@@ -28,7 +28,7 @@ for( let i = 0;i<18;i++){
             <div class="index-content-child">
                 <div class="index-content-img"></div>
                 <div class="index-content-middle">
-                    <a href="./html/wechat/wechat.html?id=${i}">
+                    <a href="./html/wechat/wechat.html?type=1&id=${i}">
                         <div class="index-content-dd">
                             <span class="index-content-name">测试${i}</span>
                             <span class="index-content-time"></span>
@@ -40,11 +40,7 @@ for( let i = 0;i<18;i++){
                 </div>
             </div>`;
     time[i].innerHTML = showDate()
-    text[i].innerHTML = `我们${time[i].innerHTML}聊了些啥内容呢${i}`
-    // content.addEventListener('click',function (e) {
-    //     console.log('yk yk yk')
-    //     e.stopPropagation()
-    // })
+    text[i].innerHTML = `我们${time[i].innerHTML}聊了些啥内容呢${i}`;
 }
 
 index.addEventListener('touchstart',function (e) {
@@ -175,9 +171,6 @@ iContent.addEventListener("click",function (e) {
     let scrollH = iContent.scrollTop;
     hParent = iContent.offsetHeight;
     h = iChild[0].offsetHeight;
-    // iChild.forEach((item)=>{
-    //     hChild += item.offsetHeight
-    // })
     for (let i = 0;i < iChild.length;i++){
         hChild += iChild[i].offsetHeight
     }
@@ -211,3 +204,9 @@ function cycle(hP,hC){
 footer.addEventListener("click",function (e) {
     clearInterval(timer)
 })
+
+//获取滚动条的位置
+nowLocation(iContent,'wechatScroll')
+
+//返回到指定的位置 id 滚动条区域
+backLocation(iContent,'wechatScroll')

@@ -7,7 +7,8 @@ var content = document.getElementById('content');
 var main = document.getElementById('main');
 var input = document.getElementById('input');
 var send = document.getElementById('send');
-var name = document.getElementsByClassName('wechat-header-name')[0];
+var name1 = document.getElementsByClassName('wechat-header-name')[0];
+var back = document.getElementsByClassName('wechat-back-a')[0]
 var time = document.getElementsByClassName('wechat-body-time');
 var myInput = document.getElementsByClassName('wechat-body-myself-content');
 var answer = document.getElementsByClassName('wechat-body-yourself-content');
@@ -31,9 +32,10 @@ var html = `<div class="wechat-body-child">
 
 input.focus()//输入框自动获取焦点
 
-let id = location.href.split('?')[1].split('=')[1]
-name.innerHTML = '测试'+id;
-console.log(id,name,name.innerHTML)
+var type = parseInt(location.href.split("?")[1].split('type=')[1].split('=')[0].split('&')[0]);
+console.log(location.href.split("?")[1].split('type=')[1].split('=')[0].split('&')[0])
+let id = location.href.split("?")[1].split('id=')[1]
+name1.innerHTML = `测试${id}`;
 
 //显示框里面的点击
 function contentClick(e){
@@ -112,6 +114,19 @@ input.addEventListener('keyup',function (e) {
     if (e.keyCode == 13){
         sendClick(e)
         input.focus()
+    }
+})
+
+back.addEventListener('click',function (e) {
+    switch (type){
+        case 1:
+            back.href = "../../../weChatDeom/index.html";
+            break
+        case 2:
+            back.href = "../../../weChatDeom/html/book/index.html";
+            break
+        case 3:
+            break
     }
 })
 

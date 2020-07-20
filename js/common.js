@@ -140,3 +140,17 @@ function debounce(fn, wait) {
     if (timeout !== null) clearTimeout(timeout);
     timeout = setTimeout(fn, wait);
 }
+
+//记录当前位置  id 滚动条区域 scrollLocation 存储在localstorage 里面的名字
+function nowLocation(id,scrollLocation) {
+    id.addEventListener('scroll',function (e) {
+        let scrollH = id.scrollTop;
+        localStorage.setItem(scrollLocation,scrollH)
+    })
+}
+
+//返回到指定的位置 id 滚动条区域  scrollLocation 存储在localstorage 里面的名字
+function backLocation(id,scrollLocation) {
+    let scrollH = parseInt(localStorage.getItem(scrollLocation)) || 0;
+    id.scrollTop = scrollH;
+}
