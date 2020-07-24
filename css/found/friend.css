@@ -1,0 +1,50 @@
+.friend-content{
+    height: 91.5%;
+}
+.friend-content .friend-content-child{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+.friend-content .friend-content-child .friend-content-child-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f0f;
+}
+.friend-content .friend-content-child .friend-content-child-text{
+    padding: 0 0 0 10px;
+    width: calc(100% - 30px);
+}
+
+.friend-content .friend-content-child .friend-content-child-text .friend-content-title{
+    width: 100%;
+    color:#fff;
+}
+.friend-content .friend-content-child .friend-content-child-text .friend-content-function{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.friend-content .friend-content-child .friend-content-child-text .friend-content-function .friend-content-call{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.friend-content .friend-content-child .friend-content-child-text .friend-content-function .friend-content-call .friend-content-love{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    border-radius: 50%;
+}
+.friend-content .friend-content-child .friend-content-child-text .friend-content-function .friend-content-call .friend-content-tall{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: greenyellow;
+    border-radius: 50%;
+}

@@ -1,4 +1,70 @@
 var timeout = null;
+//给共同底部加内容
+var fParent = document.getElementById('footer-parent')
+var fParentArr = [
+    {
+        path:'../../../weChatDeom/index.html',
+        name:'微信'
+    },
+    {
+        path:'../../../weChatDeom/html/book/index.html',
+        name:'通讯录'
+    },
+    {
+        path:'../../../weChatDeom/html/found/index.html',
+        name:'发现'
+    },
+    {
+        path:'../../../weChatDeom/html/myself/index.html',
+        name:'我'
+    },
+];
+var fParentArr1 = [
+    {
+        path:'../weChatDeom/index.html',
+        name:'微信'
+    },
+    {
+        path:'../weChatDeom/html/book/index.html',
+        name:'通讯录'
+    },
+    {
+        path:'../weChatDeom/html/found/index.html',
+        name:'发现'
+    },
+    {
+        path:'../weChatDeom/html/myself/index.html',
+        name:'我'
+    },
+];
+
+//给共同的底部加内容
+function finnerHtml(num) {
+    if (num == 0){
+        addInnerHtml(fParentArr1,num)
+    } else{
+        addInnerHtml(fParentArr,num)
+    }
+}
+
+function addInnerHtml(arr,num) {
+    for (let i = 0;i<arr.length;i++){
+        fParent.innerHTML += `<div class="footer-child">
+                <a href="${arr[i].path}">
+                    <div class="footer-img"></div>
+                    <div class="footer-title">
+                        <a href="${arr[i].path}">${arr[i].name}</a>
+                    </div>
+                </a>
+            </div>`
+        var fChild = document.getElementsByClassName('footer-child')
+        if(parseInt(num) == parseInt(i)){
+            fChild[i].classList.add('active')
+        }else{
+            fChild[i].classList.remove('active')
+        }
+    }
+}
 
 function common(dyk){
     alert(dyk)

@@ -1,13 +1,14 @@
 function log(text){
     console.log(text)
 }
+finnerHtml(0)
 var index = document.getElementById('index');
 var other = document.getElementById('other');
 var content = document.getElementById('content');
 var screen = document.getElementById('screen');
 var sContent = document.getElementById('sContent');
 var iContent = document.getElementById('iContent');
-var footer = document.getElementById('footer');
+// var footer = document.getElementById('footer');
 var iChild = document.getElementsByClassName('index-content-child');
 var time = document.getElementsByClassName('index-content-time');
 var text = document.getElementsByClassName('index-content-child-span')
@@ -201,9 +202,9 @@ function cycle(hP,hC){
     },10)
 }
 
-footer.addEventListener("click",function (e) {
-    clearInterval(timer)
-})
+// footer.addEventListener("click",function (e) {
+//     clearInterval(timer)
+// })
 
 //获取滚动条的位置
 nowLocation(iContent,'wechatScroll')

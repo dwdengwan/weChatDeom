@@ -52,7 +52,7 @@ html,body{
     border-radius: 50%;
     background: #f09;
 }
-.footer-child.active .footer-title{
+.footer-child.active .footer-title a{
     color:red;
 }
 .footer-child.active .footer-img{

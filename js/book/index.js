@@ -1,3 +1,4 @@
+finnerHtml(1)
 var content = document.getElementById('content');
 var ul = document.getElementsByClassName('fix-ul')[0]
 for (let i = 0; i < 5; i++) {
