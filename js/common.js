@@ -123,14 +123,14 @@ function nowTime(num) {
 // 今年内的 7月1日
 // 今年外的 2018年8月31日
 function showDate(){
-    // let oldTime = 0;//1594166828668
-    // if (localStorage.getItem('oldtime')) {
-    //     oldTime = localStorage.getItem('oldtime')
-    // }else{
-    //     oldTime = new Date().getTime();
-    //     localStorage.setItem('oldtime',oldTime)
-    // }
-    let oldTime = 1594301899668;
+    let oldTime = 0;//1594166828668
+    if (localStorage.getItem('oldtime')) {
+        oldTime = localStorage.getItem('oldtime')
+    }else{
+        oldTime = new Date().getTime();
+        localStorage.setItem('oldtime',oldTime)
+    }
+    // let oldTime = 1594301899668;
     let newTime = new Date().getTime();
     let apartTime = newTime - oldTime;
     let date = nowTime(oldTime)

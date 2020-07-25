@@ -34,6 +34,17 @@
     align-items: center;
     justify-content: space-around;
 }
+.friend-content .friend-content-child .friend-content-child-text .friend-content-function .friend-content-call span{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.friend-content .friend-content-child .friend-content-child-text .friend-content-function .friend-content-call .friend-content-love-num,
+.friend-content .friend-content-child .friend-content-child-text .friend-content-function .friend-content-call .friend-content-tall-num{
+    width: 20px;
+}
+.friend-content .friend-content-child .friend-content-child-text .friend-content-function .friend-content-call .friend-content-love.active{
+    background: #0f0;
+}
 .friend-content .friend-content-child .friend-content-child-text .friend-content-function .friend-content-call .friend-content-love{
     display: inline-block;
     width: 20px;
