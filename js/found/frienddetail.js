@@ -9,7 +9,11 @@ var commentSay = [];
 var time = [];
 var fdComments = '';
 var fdCommentsText = [];
-
+var screen = document.getElementsByClassName('screen')[0];
+var sChild = document.getElementsByClassName('screen-child')[0];
+var timer = null;
+var t = 86;
+var p = 0;
 
 function fdContentAddInnerHtml(){
     fdContent.innerHTML = `<div class="friend-content-child">
@@ -37,7 +41,7 @@ function fdContentAddInnerHtml(){
         fdCommentsText.push({
             text:input.value
         })
-        input.value = '';
+        // input.value = '';
         console.log(fdCommentsText)
         fdComments.innerHTML += `<div class="frienddetail-comments-child">
             <div class="frienddetail-comments-img"></div>
@@ -63,6 +67,29 @@ function fdContentAddInnerHtml(){
     time = document.getElementsByClassName('friend-content-time');
     time[0].innerHTML = showDate()
 }
+
+function begain(){
+    // ${input.value}
+    clearInterval(timer)
+    sChild.innerHTML = `<span class='screen-child-text'>${input.value}</span>`
+    timer = setInterval(()=>{
+        console.log(t)
+        sChild.style.top = t + '%';
+        sChild.style.opacity = p;
+        t --;
+        p += 0.1 
+        if(t < 62){
+            t = 86;
+            p = 0;
+        }
+        if(p > 1){
+            p -= 0.1
+        }else if(p < 0){
+            p += 0.1
+        }
+    },100)
+}
+
 fdContentAddInnerHtml()
 
 
@@ -100,7 +127,12 @@ send.addEventListener('click',function (e) {
     </div>`
     fdContentArr.tallNum = parseInt(fdContentArr.tallNum)+1;
     fdContentAddInnerHtml()
-    input.value = '';
+    begain()
+    // input.value = '';
     console.log(fdContentArr)
     // localStorage.setItem('fContentArrChild',fdContentArr)
 })
+
+// screen.addEventListener('click',function(e){
+
+// })
