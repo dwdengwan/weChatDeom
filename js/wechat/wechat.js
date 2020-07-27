@@ -44,7 +44,7 @@ function contentClick(e){
     main.style.display = 'block';
     main.style.opacity = 0;
     main.style.top = (e.screenY - 120) + 'px';
-    main.style.left = (e.screenX - 70) + 'px';
+    main.style.left = (e.screenX - 20) + 'px';
     opacity = 0;
     timer = setInterval(()=>{
         opacity += 0.02;

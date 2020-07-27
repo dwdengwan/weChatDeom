@@ -134,7 +134,10 @@ function showDate(){
     let newTime = new Date().getTime();
     let apartTime = newTime - oldTime;
     let date = nowTime(oldTime)
-    if (parseInt(apartTime) < (1000*60*60)){ //一小时内
+    if(parseInt(apartTime) < (1000*60)){
+        let s = parseInt(apartTime / 1000)
+        return s + '秒钟前'
+    } else if (parseInt(apartTime) > (1000*60) && parseInt(apartTime) < (1000*60*60)){ //一小时内
         let min = parseInt(apartTime / (1000*60))
         return min + '分钟前'
     }else if(parseInt(apartTime) < (1000*60*60*24) && parseInt(apartTime) > (1000*60*60)){ //当日内
@@ -211,7 +214,7 @@ function debounce(fn, wait) {
 function nowLocation(id,scrollLocation) {
     id.addEventListener('scroll',function (e) {
         let scrollH = id.scrollTop;
-        localStorage.setItem(scrollLocation,scrollH)
+        localStorage.setItem(scrollLocation,scrollH);
     })
 }
 
@@ -219,4 +222,14 @@ function nowLocation(id,scrollLocation) {
 function backLocation(id,scrollLocation) {
     let scrollH = parseInt(localStorage.getItem(scrollLocation)) || 0;
     id.scrollTop = scrollH;
+}
+
+//随机选择一种颜色
+function  randColor() {
+    let r,g,b,a;
+    r = parseInt(Math.random()*255);
+    g = parseInt(Math.random()*255);
+    b = parseInt(Math.random()*255);
+    a = Math.random()+0.5;
+    return `rgba(${r},${g},${b},${a})`
 }

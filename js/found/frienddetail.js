@@ -1,7 +1,18 @@
-var fdContent = document.getElementsByClassName('frienddetail-content')[0]
-var fdContentArr =JSON.parse(localStorage.getItem('fContentArr'));
+var fdContent = document.getElementsByClassName('frienddetail-content')[0];
+var fdContentArr =JSON.parse(localStorage.getItem('fContentArrChild'));
+var input = document.getElementById('input');
+var send = document.getElementById('send');
+var loveNum = 0;
+var loveNnum = 0;
+var commentImg = [];
+var commentSay = [];
+var time = [];
+var fdComments = '';
+var fdCommentsText = [];
 
-fdContent.innerHTML = `<div class="friend-content-child">
+
+function fdContentAddInnerHtml(){
+    fdContent.innerHTML = `<div class="friend-content-child">
         <div class="friend-content-child-img"></div>
         <div class="friend-content-child-text">
             <div class="friend-content-title">
@@ -16,17 +27,44 @@ fdContent.innerHTML = `<div class="friend-content-child">
             </div>
         </div>
     </div>`
-var loveNum = document.getElementsByClassName('friend-content-love')[0];
-var loveNnum = document.getElementsByClassName('friend-content-love-num')[0];
+    fdContent.innerHTML += `<div class="frienddetail-content-comments"></div>`
+    fdComments = document.getElementsByClassName('frienddetail-content-comments')[0];
+    for (let z = 0;z<parseInt(fdContentArr.tallNum);z++){
+        console.log(input.value)
+        if (input.value == ''){
+            input.value = '我的未来不是梦';
+        }
+        fdCommentsText.push({
+            text:input.value
+        })
+        input.value = '';
+        console.log(fdCommentsText)
+        fdComments.innerHTML += `<div class="frienddetail-comments-child">
+            <div class="frienddetail-comments-img"></div>
+            <div class="frienddetail-comments-say">${fdCommentsText[z].text}</div>
+        </div>`
+    }
+    loveNum = document.getElementsByClassName('friend-content-love')[0];
+    loveNnum = document.getElementsByClassName('friend-content-love-num')[0];
+    commentImg = document.getElementsByClassName('frienddetail-comments-img');
+    commentSay = document.getElementsByClassName('frienddetail-comments-say');
 
-if (fdContentArr.status == 1){
-    loveNum.classList.add('active');
-}else{
-    loveNum.classList.remove('active');
+    for (let z = 0;z<parseInt(fdContentArr.tallNum);z++) {
+        commentImg[z].style.background = randColor();
+        // commentSay[z].style.color = randColor();
+    }
+
+    if (fdContentArr.status == 1){
+        loveNum.classList.add('active');
+    }else{
+        loveNum.classList.remove('active');
+    }
+
+    time = document.getElementsByClassName('friend-content-time');
+    time[0].innerHTML = showDate()
 }
+fdContentAddInnerHtml()
 
-var time = document.getElementsByClassName('friend-content-time');
-time[0].innerHTML = showDate()
 
 loveNum.addEventListener('click',function (e) {
     // numAdd(parseInt(item.loveNum),i)
@@ -41,7 +79,28 @@ loveNum.addEventListener('click',function (e) {
         fdContentArr.status = 1;
     }
     fdContentArr.loveNum = num;
+    let arrParent = JSON.parse(localStorage.getItem('fContentArr'))
+    arrParent.splice(fdContentArr.clickNum,1,fdContentArr)
+    arrParent = JSON.stringify(arrParent)
+    localStorage.setItem('fContentArr',arrParent)
     let arr = JSON.stringify(fdContentArr);
-    localStorage.setItem('fContentArr',arr);
+    localStorage.setItem('fContentArrChild',arr);
     loveNnum.innerHTML = num;
+})
+
+send.addEventListener('click',function (e) {
+    if (input.value == '') return
+    console.log(input.value);
+    // fdCommentsText.push({
+    //     text:input.value
+    // })
+    fdComments.innerHTML += `<div class="frienddetail-comments-child">
+        <div class="frienddetail-comments-img"></div>
+        <div class="frienddetail-comments-say">${input.value}</div>
+    </div>`
+    fdContentArr.tallNum = parseInt(fdContentArr.tallNum)+1;
+    fdContentAddInnerHtml()
+    input.value = '';
+    console.log(fdContentArr)
+    // localStorage.setItem('fContentArrChild',fdContentArr)
 })

@@ -1,0 +1,21 @@
+.frienddetail-content{
+    height: 83.5%;
+}
+.frienddetail-comments-child{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.frienddetail-comments-child .frienddetail-comments-img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    /*background: lime;*/
+}
+.frienddetail-comments-child .frienddetail-comments-say{
+    margin-left: 10px;
+    color:lime;
+}
