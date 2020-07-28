@@ -77,15 +77,14 @@ function begain(){
         sChild.style.top = t + '%';
         sChild.style.opacity = p;
         t --;
-        p += 0.1 
         if(t < 62){
             t = 86;
             p = 0;
         }
-        if(p > 1){
-            p -= 0.1
-        }else if(p < 0){
-            p += 0.1
+        if(p >= 1){
+            p -= 0.1;
+        }else if(p >= 0 && p < 1){
+            p += 0.1;
         }
     },100)
 }
