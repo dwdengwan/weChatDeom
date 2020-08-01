@@ -1,0 +1,18 @@
+.scan-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.scan-content{
+    height: 91.5%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scan-content-parent{
+    /*width: 300px;*/
+    /*height: 300px;*/
+    border-radius: 50%;
+    background: red;
+}

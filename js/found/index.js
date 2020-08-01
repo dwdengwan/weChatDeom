@@ -11,11 +11,11 @@ var contentArr = [
         name:'视频号'
     },
     {
-        path:'./music.html',
+        path:'./scan.html',
         name:'扫一扫'
     },
     {
-        path:'./music.html',
+        path:'./shake.html',
         name:'摇一摇'
     },
     {

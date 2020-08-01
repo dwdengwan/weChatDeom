@@ -130,6 +130,7 @@ function showDate(){
         oldTime = new Date().getTime();
         localStorage.setItem('oldtime',oldTime)
     }
+    oldTime = parseInt(oldTime)
     // let oldTime = 1594301899668;
     let newTime = new Date().getTime();
     let apartTime = newTime - oldTime;
@@ -165,7 +166,8 @@ function showDate(){
     }else if (parseInt(apartTime) < (1000*60*60*24*7) && parseInt(apartTime) > (1000*60*60*24)){ //本周内
         // nowTime()
         let n = new Date(oldTime).getDay()
-        weekDay(n)
+        n = parseInt(n)
+        return weekDay(n)
     }else if (parseInt(apartTime) > (1000*60*60*24*7) && parseInt(apartTime) < (1000*60*60*24*365)){ //今年内
         let mon = date.split('年')[1].split('日')[0]+'日'
         return mon
@@ -232,4 +234,20 @@ function  randColor() {
     b = parseInt(Math.random()*255);
     a = Math.random()+0.5;
     return `rgba(${r},${g},${b},${a})`
+}
+
+//数组里找小于某个元素的个数
+function searchInsert(arr, x) {
+    let left = 0;
+    let right = arr.length - 1;
+    while (left <= right) {
+        let mid = (left + right) >> 1;
+        if (arr[mid] === x) {
+            return mid;
+        } else if (x < arr[mid]) {
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
 }

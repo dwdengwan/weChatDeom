@@ -115,6 +115,7 @@ function runInfo(i){
     child[i].innerHTML = `<div class="container"></div>`
     myClick(arr[i])
     arr.splice(i,1,-1)
+    console.log(searchInsert(arr,-1))
     myselfWin(myselfStr,-1)
     if(isWin){
         return
@@ -162,8 +163,8 @@ function adviceInfo(content){
 }
 
 start.addEventListener('click',function (e) {
-    console.log('start')
-    if (isWin) {
+    console.log('start',parseInt(searchInsert(arr,-1)) + parseInt(searchInsert(arr,9)) == arr.length )
+    if (isWin || parseInt(searchInsert(arr,-1)) + parseInt(searchInsert(arr,9)) == arr.length ) {
         adviceInfo('游戏已经结束了，是否重新开始？');
         confirm.style.display = 'flex';
         return
