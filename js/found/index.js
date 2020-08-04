@@ -23,7 +23,7 @@ var contentArr = [
         name:'看一看'
     },
     {
-        path:'./friend.html',
+        path:'./search.html',
         name:'搜一搜'
     },
     {

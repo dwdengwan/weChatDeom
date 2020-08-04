@@ -1,0 +1,22 @@
+.search-content{
+    height: 91.5%;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: height 5s ease-in-out 300ms;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    height: 200px;
+}
+
+.search-content .search-content-trdiv{
+    width: 100%;
+    /*height: 30%;*/
+    height: 100px;
+    background: rgba(100,100,100,0.5);
+}
+.search-content .search-content-div{
+    width: 100%;
+    height: 30%;
+    background: rgba(193, 141, 156, 0.5);
+}
