@@ -3,10 +3,10 @@
 }
 
 .fade-enter-active, .fade-leave-active {
-    transition: height 5s ease-in-out 300ms;
+    transition: opacity 2s ease-in-out 300ms;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    height: 200px;
+    opacity: 0;
 }
 
 .search-content .search-content-trdiv{

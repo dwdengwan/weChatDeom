@@ -38,6 +38,10 @@
 .found-content-child .found-content-right .found-content-next{
     font-size:24px;
 }
+.found-content-child.active{
+    color:goldenrod;
+    font-weight: bold;
+}
 .found-content .found-content-kongge{
     width: 100%;
     height: 2%;

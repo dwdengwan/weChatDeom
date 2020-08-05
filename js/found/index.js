@@ -27,7 +27,7 @@ var contentArr = [
         name:'搜一搜'
     },
     {
-        path:'./music.html',
+        path:'./nearpeople.html',
         name:'附近的人'
     },
     {
@@ -65,5 +65,33 @@ for (let i = 0;i<contentArr.length;i++){
     var fChild = document.getElementsByClassName('found-child-img');
     if (i>1){
         fChild[i].style.display = 'none';
+    }
+}
+
+var aClick = document.getElementsByTagName('a');
+var fChild = document.getElementsByClassName('found-content-child')
+for (let z=0;z<aClick.length;z++){
+    aClick[z].addEventListener('click',function (e) {
+        localStorage.setItem('found-index-aclick',z)
+        fChild[z].classList.add('active');
+        for (let i=0;i<fChild.length;i++){
+            if (i !== z){
+                fChild[i].classList.remove('active');
+            }
+        }
+    })
+}
+var num = localStorage.getItem('found-index-aclick');
+if (num == null){
+    for (let i=0;i<fChild.length;i++){
+        fChild[i].classList.remove('active');
+    }
+} else{
+    num = parseInt(num);
+    fChild[num].classList.add('active');
+    for (let i=0;i<fChild.length;i++){
+        if (i !== num){
+            fChild[i].classList.remove('active');
+        }
     }
 }

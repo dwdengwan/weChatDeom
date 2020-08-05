@@ -1,3 +1,47 @@
+// import{vue} from 'https://cdn.jsdelivr.net/npm/vue/dist/vue.js'
+var script = document.createElement("script");
+script.src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js";
+document.head.appendChild(script);
+script.addEventListener("load",function(){
+    // 等待s的load事件加载完响应，防止未加载完就调用出错
+    console.log('my featuer is not a dream');
+})
+
+/*
+* 模仿JQ 获取元素
+* element .class #id
+* */
+var elem = '';
+function YY53KG(element) {
+    elem = element;
+    let first = element.split('')[0];
+    let last = element.slice(1);
+    switch (first){
+        case '.':
+            document.getElementsByClassName(last)
+            break;
+        case '#':
+            document.getElementById(last)
+            break;
+    }
+    /*
+        模仿JQ
+        'a'增加class，
+        'd'移除class
+     */
+    this.classFlag = function (flag,className) {
+        console.log(this)
+        switch (flag){
+            case 'a' || 'A':
+                return this.classList.add(className);
+                break;
+            case 'd' || 'D':
+                return this.classList.remove(className);
+                break;
+        }
+    }
+}
+
 var timeout = null;
 //给共同底部加内容
 var fParent = document.getElementById('footer-parent')
