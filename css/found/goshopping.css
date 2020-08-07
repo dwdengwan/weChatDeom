@@ -1,0 +1,15 @@
+.goshopping-content{
+    height: 91.5%;
+    position: relative;
+}
+.goshopping-content .goshopping-content-child{
+    position: absolute;
+    padding: 2%;
+}
+.goshopping-content .goshopping-content-child .goshopping-content-ul .goshopping-content-li{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(12, 200, 38);
+    padding: 1%;
+    opacity: 0;
+}

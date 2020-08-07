@@ -6,10 +6,13 @@
 // var left = YY53KG('.nearpeople-fix-left')[0];
 // var right = YY53KG('.nearpeople-fix-right')[0];
 // var buttom = YY53KG('.nearpeople-fix-buttom')[0];
-var buttom = YY53KG('#buttom');
-buttom.classFlag('a','active');
+// var buttom = YY53KG('#buttom');
+// buttom.classFlag('a','active');
 // buttom.classList.add('active')
-
+YY53KG('#buttom').css({'background':'#f0f','border':'1px solid red'}).addClass('active').on('click',function (e) {
+    console.log('yy53kg')
+})
+YY53KG('#buttom').findClass('active')
 
 // for (let z=0;z<3;z++){
 //     lunbo.innerHTML += `<div class="nearpeople-lunbo-child">

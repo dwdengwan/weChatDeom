@@ -18,18 +18,20 @@ function YY53KG(element) {
     let last = element.slice(1);
     switch (first){
         case '.':
-            document.getElementsByClassName(last)
+            return document.getElementsByClassName(last)
             break;
         case '#':
-            document.getElementById(last)
+            return document.getElementById(last)
             break;
     }
+}
+YY53KG.prototype ={
     /*
         模仿JQ
         'a'增加class，
         'd'移除class
      */
-    this.classFlag = function (flag,className) {
+    classFlag : function (flag,className) {
         console.log(this)
         switch (flag){
             case 'a' || 'A':

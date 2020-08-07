@@ -31,7 +31,7 @@ var contentArr = [
         name:'附近的人'
     },
     {
-        path:'./music.html',
+        path:'./goshopping.html',
         name:'购物'
     },
     {
