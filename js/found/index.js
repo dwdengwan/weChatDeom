@@ -39,7 +39,7 @@ var contentArr = [
         name:'游戏'
     },
     {
-        path:'./music.html',
+        path:'./smallprogram.html',
         name:'小程序'
     },
     {
