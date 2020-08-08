@@ -86,20 +86,28 @@
 }
 .smallprogram .dcircle2{
     left: 100px;
+    width: 80px;
+    height: 80px;
     background: rgba(200,100,50,0.5);
 }
 .smallprogram .dcircle3{
     top: 100px;
+    width: 120px;
+    height: 120px;
     background: rgba(50,200,150,0.5);
 }
 .smallprogram .dcircle4{
     left: 100px;
     top: 100px;
+    width: 50px;
+    height: 50px;
     background: rgba(100,100,150,0.5);
 }
 .smallprogram .dcircle5{
     left: 190px;
     top: 190px;
+    width: 180px;
+    height: 180px;
     background: rgba(50,150,150,0.5);
 }
 

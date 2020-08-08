@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e82f0ba8-5cef-4f1b-bfc1-aec9ab0f82e7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/css/found/smallprogram.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/found/smallprogram.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/found/smallprogram.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/found/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/found/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/found/smallprogram.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/found/smallprogram.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="smallprogram.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="smallprogram.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/found/smallprogram.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1650">
@@ -52,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smallprogram.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="smallprogram.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/found/smallprogram.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+            <state relative-caret-position="425">
+              <caret line="101" column="16" lean-forward="true" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -166,9 +163,9 @@
         <option value="$PROJECT_DIR$/css/found/goshopping.css" />
         <option value="$PROJECT_DIR$/js/found/goshopping.js" />
         <option value="$PROJECT_DIR$/js/found/index.js" />
-        <option value="$PROJECT_DIR$/css/found/smallprogram.css" />
         <option value="$PROJECT_DIR$/html/found/smallprogram.html" />
         <option value="$PROJECT_DIR$/js/found/smallprogram.js" />
+        <option value="$PROJECT_DIR$/css/found/smallprogram.css" />
       </list>
     </option>
   </component>
@@ -322,7 +319,7 @@
       <workItem from="1596609313886" duration="13699000" />
       <workItem from="1596672438236" duration="7838000" />
       <workItem from="1596791916583" duration="5983000" />
-      <workItem from="1596853127355" duration="15606000" />
+      <workItem from="1596853127355" duration="16544000" />
     </task>
     <task id="LOCAL-00001" summary="idea 开发">
       <created>1594109264933</created>
@@ -541,11 +538,18 @@
       <option name="project" value="LOCAL" />
       <updated>1596797951135</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="小程序新页面的编写">
+      <created>1596877441795</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1596877441795</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282529000" />
+    <option name="totallyTimeSpent" value="283467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -616,7 +620,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="首页加 自动滚动阅览和下拉拖拽。" />
     <MESSAGE value="首页 下拉拖拽 至 新页面" />
     <MESSAGE value="文件 结构调整" />
     <MESSAGE value="增加新文件" />
@@ -641,7 +644,8 @@
     <MESSAGE value="新页面的编写" />
     <MESSAGE value="搜一搜新页面的编写和引入vue.js" />
     <MESSAGE value="购物新页面的编写" />
-    <option name="LAST_COMMIT_MESSAGE" value="购物新页面的编写" />
+    <MESSAGE value="小程序新页面的编写" />
+    <option name="LAST_COMMIT_MESSAGE" value="小程序新页面的编写" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1043,13 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/found/smallprogram.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/found/smallprogram.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1078,6 +1075,13 @@
             <element signature="e#639#673#0" />
             <element signature="e#661#761#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/found/smallprogram.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="101" column="16" lean-forward="true" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
         </state>
       </provider>
     </entry>
