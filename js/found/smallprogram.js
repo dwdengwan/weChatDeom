@@ -149,7 +149,7 @@ circle.addEventListener('touchmove', function(e) {
     } else if(oLeft >= maxW) {
         oLeft = maxW;
     }
-    if (oLeft>234){
+    if (oLeft>224){
         main.style.display = 'none';
         othermain.style.display = 'block';
         clearInterval(timer)

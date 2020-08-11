@@ -1,9 +1,9 @@
 (function fn() {
-    var scanParent = document.getElementsByClassName('scan-content-parent')[0]
-    var timer = null
-    var timeout = null;
-    var num = 0;
-    var r = 0;
+    let scanParent = document.getElementsByClassName('scan-content-parent')[0]
+    let timer = null
+    let timeout = null;
+    let num = 0;
+    let r = 0;
 
     function cycleColor(){
         clearInterval(timer)
