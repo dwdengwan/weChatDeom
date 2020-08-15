@@ -17,7 +17,7 @@ var myContentArr = [
 
 myContent.innerHTML +=
     `<div class="found-content-kongge"></div>
-    <div class="found-content-child pay">
+    <div class="found-content-child pay" onclick="goWay(event,0)">
         <div class="found-content-left">
             <div class="found-content-img"></div>
             <div class="found-content-title">支付</div>
@@ -29,9 +29,21 @@ myContent.innerHTML +=
     <div class="found-content-kongge"></div>`
 var pay = document.getElementsByClassName('pay')[0];
 console.log(pay)
+let pathUrl = window.location.href.split('index.html')[0]
 pay.addEventListener('click',function (e) {
     console.log('dyk');
 })
+function goWay(e,i){
+    let url = '';
+    switch (i){
+        case 0:
+          url = 'pay.html';
+          break;
+        case 1:
+          url = 'setting.html';
+    }
+    window.location.href = pathUrl+url;
+}
 myContentArr.forEach((item,i,arr)=>{
     myContent.innerHTML +=
         `<div class="found-content-child">
@@ -47,7 +59,7 @@ myContentArr.forEach((item,i,arr)=>{
 
 myContent.innerHTML += `
        <div class="found-content-kongge"></div>
-       <div class="found-content-child">
+       <div class="found-content-child" onclick="goWay(event,1)">
             <div class="found-content-left">
                  <div class="found-content-img"></div>
                  <div class="found-content-title">设置</div>
