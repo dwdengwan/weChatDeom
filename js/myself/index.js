@@ -41,12 +41,16 @@ function goWay(e,i){
           break;
         case 1:
           url = 'setting.html';
+          break;
+        case 2:
+          url = 'collect.html';
+          break;  
     }
     window.location.href = pathUrl+url;
 }
 myContentArr.forEach((item,i,arr)=>{
     myContent.innerHTML +=
-        `<div class="found-content-child">
+        `<div class="found-content-child" onclick="goWay(event,${i+2})">
             <div class="found-content-left">
                 <div class="found-content-img"></div>
                 <div class="found-content-title">${item.name}</div>
