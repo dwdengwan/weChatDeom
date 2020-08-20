@@ -211,3 +211,46 @@ nowLocation(iContent,'wechatScroll')
 
 //返回到指定的位置 id 滚动条区域
 backLocation(iContent,'wechatScroll')
+
+//axios POST请求
+function getInitData() {
+    let params = {
+        url:"/",
+        obj:{
+            name:'zmj',
+            age:23,
+        }
+    }
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        let num = xhr.readyState;
+        switch (num){
+            case 0:
+                //todo
+                break;
+            case 1:
+                //todo
+                break;
+            case 2:
+                //todo
+                break;
+            case 3:
+                //todo
+                break;
+            case 4:
+                //todo
+                break;
+        }
+        if (num === 4 && xhr.status === 200){
+            console.log('请求成功',xhr.response)
+            let obj = JSON.parse(xhr.response);
+            console.log(obj,obj.name,obj.age)
+        }else{
+            console.log('请求失败')
+        }
+    }
+    xhr.open('POST','http://127.0.0.1:3000/name="dw"&&age=22',true)
+    xhr.send()
+}
+
+getInitData()
