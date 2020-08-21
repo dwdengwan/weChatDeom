@@ -94,11 +94,12 @@ var server = http.createServer(function (req, res) {
     // url.parse 方法来解析 URL 中的参数
     var pathname = url.parse(req.url, true).pathname;
     let path = pathname.split('/')[0]+'/';
+    console.log(path)
     if (path == '/') {
         // 定义了一个body变量，用于暂存请求体的信息
         var body = {
             name:'dw',
-            age:22,
+            value:'',
         };
         // 通过req的data事件监听函数，每当接受到请求体的数据，就累加到body变量中
         req.on('data', function (data) {
