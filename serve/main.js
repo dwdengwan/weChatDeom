@@ -88,17 +88,26 @@ var url = require('url');
 var server = http.createServer(function (req, res) {
     //解决跨域问题
     res.writeHeader(200, {
-        'Content-Type': 'text/plain',
+        // 'Content-Type': 'text/plain;charset=utf-8',
+        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
         'Access-Control-Allow-Origin': '*'
     });
     // url.parse 方法来解析 URL 中的参数
-    var pathname = url.parse(req.url, true).pathname;
-    let path = pathname.split('/')[0]+'/';
-    console.log(path)
-    if (path == '/') {
+    //http:127.0.0.1:3000/login?name='dw'&&password='123456'
+    let searchObj = url.parse(req.url, true).search.split('?')[1];
+    let reqArr = searchObj.split('&&');
+    let reqObj = {};
+    for (let z=0;z<reqArr.length;z++){
+        if (reqArr[z] !== ''){
+            reqObj[reqArr[z].split('=')[0]] = decodeURI(reqArr[z].split('=')[1])
+        }
+    }
+    // // decodeURI()  .split('/')[1];
+    let path = url.parse(req.url, true).pathname;
+    if (path == '/login') {
         // 定义了一个body变量，用于暂存请求体的信息
         var body = {
-            name:'dw',
+            name:'邓万',
             value:'',
         };
         // 通过req的data事件监听函数，每当接受到请求体的数据，就累加到body变量中

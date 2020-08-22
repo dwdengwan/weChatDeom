@@ -309,8 +309,14 @@ function searchInsert(arr, x) {
  * }
  */
 function httpPOST(params) {
+    //http://127.0.0.1:3000/login?name='dw'&&password='123456'
     const path = 'http://127.0.0.1:3000';
     let paramsObj = params;
+    let obj = paramsObj.obj;
+    let str = '';
+    for(key in obj){
+        str += key + '=' + encodeURI(obj[key]) + '&&'
+    }
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         let num = xhr.readyState;
@@ -340,6 +346,6 @@ function httpPOST(params) {
             console.log('请求失败',xhr)
         }
     }
-    xhr.open('POST',path+paramsObj.url+'name="dw"&&age=22',true)
+    xhr.open('POST',path+paramsObj.url+'?'+str,true)
     xhr.send()
 }

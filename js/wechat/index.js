@@ -215,10 +215,10 @@ backLocation(iContent,'wechatScroll')
 //axios POST请求
 function getInitData() {
     let params = {
-        url:'/',
+        url:'/login',
         obj:{
-            name:'dw',
-            age:22
+            name:'邓万',
+            age:'12'
         }
     }
     httpPOST(params)
