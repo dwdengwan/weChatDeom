@@ -314,10 +314,10 @@ function httpPOST(params) {
     let paramsObj = params;
     let obj = paramsObj.obj;
     let str = '';
+    let data = {};
     for(key in obj){
         str += key + '=' + encodeURI(obj[key]) + '&&'
     }
-    let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         let num = xhr.readyState;
         switch (num){
@@ -339,13 +339,13 @@ function httpPOST(params) {
         }
         if (num === 4 && xhr.status === 200){
             console.log('请求成功',xhr.response)
-            let obj = JSON.parse(xhr.response);
-            console.log(obj,obj.name,obj.age)
-            return obj;
+            data = JSON.parse(xhr.response);
+            console.log(data,data.name,data.value)
         }else{
             console.log('请求失败',xhr)
         }
     }
     xhr.open('POST',path+paramsObj.url+'?'+str,true)
     xhr.send()
+    return data;
 }

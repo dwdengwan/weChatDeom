@@ -221,7 +221,8 @@ function getInitData() {
             age:'12'
         }
     }
-    httpPOST(params)
+    let data = httpPOST(params)
+    console.log(data)
 }
 
 getInitData()
