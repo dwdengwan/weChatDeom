@@ -29,13 +29,42 @@ var html = `<div class="wechat-body-child">
                     <div class="wechat-body-yourself-content"></div>
                 </div>
             </div>`;
+var resLen = 0;//后端返回数组的长度
+var mySayContent = [];
+var youSayContent = [];
+var resObj = [];
 
 input.focus()//输入框自动获取焦点
 
 var type = parseInt(location.href.split("?")[1].split('type=')[1].split('=')[0].split('&')[0]);
 console.log(location.href.split("?")[1].split('type=')[1].split('=')[0].split('&')[0])
 let id = location.href.split("?")[1].split('id=')[1]
-name1.innerHTML = `测试${id}`;
+name1.innerHTML = `${decodeURI(id)}`;
+
+//获取聊天记录
+function getWechatData() {
+    let params = {
+        url:'/login/details',
+        obj:{
+            mySayContent,
+            youSayContent,
+        }
+    }
+    let fn = function (res) {
+        console.log('login/details')
+        resObj = res[0];
+        resLen = resObj.mySayContent.length;
+        sendClickNum = resLen;
+        for (let z=0;z<resLen;z++){
+            content.innerHTML +=  html;
+            myInput[z].innerHTML = resObj.mySayContent[z];
+            answer[z].innerHTML = resObj.youSayContent[z];
+        }
+    }
+    httpPOST(params,fn)
+}
+
+getWechatData()
 
 //显示框里面的点击
 function contentClick(e){
@@ -70,6 +99,8 @@ function contentClick(e){
 
 //发送按钮
 function sendClick(e){
+    mySayContent = resObj.mySayContent;
+    youSayContent = resObj.youSayContent;
     if (input.value == '') return
     let oldTime = parseInt(localStorage.getItem('oldTime')) || 0;
     let newTime = new Date().getTime();
@@ -80,6 +111,7 @@ function sendClick(e){
         time[sendClickNum].innerText = '';
     }
     myInput[sendClickNum].innerText = input.value;
+    mySayContent.push(input.value)
     yourSay(sendClickNum)
     height += child[sendClickNum].offsetHeight;
     content.scrollTop = height;
@@ -87,6 +119,7 @@ function sendClick(e){
     sendClickNum ++;
     localStorage.setItem('oldTime',newTime)
     input.value = '';
+    getWechatData()
     input.focus()
 }
 
@@ -95,10 +128,13 @@ function yourSay(n){
     let text = input.value;
     if(text.indexOf('你好') > -1){
         answer[n].innerText = '谢谢你的问候，你也好呀。'
+        youSayContent.push('谢谢你的问候，你也好呀。')
     }else if(text.indexOf('在干什么') > -1){
         answer[n].innerHTML = '吃饭，睡觉，打豆豆。';
+        youSayContent.push('吃饭，睡觉，打豆豆。')
     }else{
         answer[n].innerHTML = text;
+        youSayContent.push(text)
     }
 }
 

@@ -24,25 +24,40 @@ var L = 0;//左右滑动的距离
 // time.innerHTML = nowTime()
 // time.innerHTML = showDate()
 
-for( let i = 0;i<18;i++){
-    iContent.innerHTML += `
-            <div class="index-content-child">
-                <div class="index-content-img"></div>
-                <div class="index-content-middle">
-                    <a href="./html/wechat/wechat.html?type=1&id=${i}">
-                        <div class="index-content-dd">
-                            <span class="index-content-name">测试${i}</span>
-                            <span class="index-content-time"></span>
+//axios POST请求
+function getInitData() {
+    let params = {
+        url:'/login',
+        obj:{
+            name:'邓万',
+            age:'12'
+        }
+    }
+    let fn = function(res){
+        for( let i = 0;i<res.length;i++){
+            iContent.innerHTML += `
+                    <div class="index-content-child">
+                        <div class="index-content-img"></div>
+                        <div class="index-content-middle">
+                            <a href="./html/wechat/wechat.html?type=1&id=${res[i].name}">
+                                <div class="index-content-dd">
+                                    <span class="index-content-name">${res[i].name}</span>
+                                    <span class="index-content-time"></span>
+                                </div>
+                                <div class="index-content-child-lt">
+                                    <span class="index-content-child-span"></span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="index-content-child-lt">
-                            <span class="index-content-child-span"></span>
-                        </div>
-                    </a>
-                </div>
-            </div>`;
-    time[i].innerHTML = showDate()
-    text[i].innerHTML = `我们${time[i].innerHTML}聊了些啥内容呢${i}`;
+                    </div>`;
+            time[i].innerHTML = showDate()
+            text[i].innerHTML = `${res[i].value}`;
+        }
+    }
+    httpPOST(params,fn)
 }
+
+getInitData()
 
 index.addEventListener('touchstart',function (e) {
     // console.log('1',e.target.offsetTop,index.offsetHeight)
@@ -211,18 +226,3 @@ nowLocation(iContent,'wechatScroll')
 
 //返回到指定的位置 id 滚动条区域
 backLocation(iContent,'wechatScroll')
-
-//axios POST请求
-function getInitData() {
-    let params = {
-        url:'/login',
-        obj:{
-            name:'邓万',
-            age:'12'
-        }
-    }
-    let data = httpPOST(params)
-    console.log(data)
-}
-
-getInitData()

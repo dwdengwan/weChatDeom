@@ -307,16 +307,26 @@ function searchInsert(arr, x) {
  *      age:22,
  *  }
  * }
+ * fn 接收到后台返回的数据 前端将要操作数据的方法
  */
-function httpPOST(params) {
+function httpPOST(params,fn) {
     //http://127.0.0.1:3000/login?name='dw'&&password='123456'
     const path = 'http://127.0.0.1:3000';
+    const xhr = new XMLHttpRequest();
     let paramsObj = params;
     let obj = paramsObj.obj;
     let str = '';
     let data = {};
     for(key in obj){
-        str += key + '=' + encodeURI(obj[key]) + '&&'
+        if (typeof obj[key] == "string" || typeof obj[key] == "number"){
+            str += key + '=' + encodeURI(obj[key]) + '&&';
+        } else if (obj[key] instanceof Array){
+            let encodeArr = [];
+            for (let z=0;z<obj[key].length;z++){
+                encodeArr.push(encodeURI(obj[key][z]))
+            }
+            str += key + '=' + encodeArr + '&&';
+        }
     }
     xhr.onreadystatechange = function () {
         let num = xhr.readyState;
@@ -340,12 +350,11 @@ function httpPOST(params) {
         if (num === 4 && xhr.status === 200){
             console.log('请求成功',xhr.response)
             data = JSON.parse(xhr.response);
-            console.log(data,data.name,data.value)
+            fn(data)
         }else{
             console.log('请求失败',xhr)
         }
     }
     xhr.open('POST',path+paramsObj.url+'?'+str,true)
     xhr.send()
-    return data;
 }

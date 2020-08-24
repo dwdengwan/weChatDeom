@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e82f0ba8-5cef-4f1b-bfc1-aec9ab0f82e7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/wechat/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/wechat/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/wechat/wechat.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/wechat/wechat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serve/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/serve/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,10 +20,11 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serve/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="109" column="22" lean-forward="true" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
+            <state relative-caret-position="116">
+              <caret line="193" column="33" lean-forward="true" selection-start-line="193" selection-start-column="33" selection-end-line="193" selection-end-column="33" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#2718#2929#0" />
               </folding>
             </state>
           </provider>
@@ -58,10 +62,9 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/wechat/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="224" column="21" selection-start-line="224" selection-start-column="21" selection-end-line="224" selection-end-column="21" />
+            <state relative-caret-position="416">
+              <caret line="52" column="29" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="29" />
               <folding>
-                <element signature="e#917#1733#0" />
                 <element signature="e#1784#1908#0" />
                 <element signature="e#1959#3083#0" />
                 <element signature="e#3133#3804#0" />
@@ -76,11 +79,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wechat.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/wechat/wechat.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="695">
+              <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wechat.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/wechat/wechat.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+              <folding>
+                <element signature="n#div#0;n#!!top" />
+                <element signature="e#1794#1830#0" />
+                <element signature="n#!!block;n#contentClick#0" />
+                <element signature="e#3668#3691#0" />
+                <element signature="e#3737#3757#0" />
+                <element signature="e#3804#3882#0" />
+                <element signature="e#3928#4184#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="319" column="5" selection-start-line="319" selection-start-column="5" selection-end-line="319" selection-end-column="5" />
+            <state relative-caret-position="746">
+              <caret line="327" column="48" lean-forward="true" selection-start-line="323" selection-start-column="12" selection-end-line="327" selection-end-column="48" />
               <folding>
                 <element signature="e#251#335#0" />
                 <element signature="n#!!block;n#YY53KG#0" />
@@ -94,11 +124,9 @@
                 <element signature="n#!!block;n#showDate#0" />
                 <element signature="n#!!block;n#weekDay#0" />
                 <element signature="n#!!block;n#debounce#0" />
-                <element signature="n#!!block;n#nowLocation#0" />
                 <element signature="n#!!block;n#backLocation#0" />
                 <element signature="n#!!block;n#randColor#0" />
                 <element signature="n#!!block;n#searchInsert#0" />
-                <element signature="e#7983#8336#0" />
               </folding>
             </state>
           </provider>
@@ -117,19 +145,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>friend-content-love</find>
-      <find>cilckNum</find>
-      <find>fdComments</find>
-      <find>fContentArr</find>
-      <find>fContentArrChild</find>
-      <find>fdContentArr</find>
-      <find>content</find>
-      <find>loveNum</find>
-      <find>fdContentAddInnerHtml</find>
       <find>nowLocation</find>
       <find>nowTime</find>
       <find>weekDay</find>
-      <find>log</find>
       <find>found-content-child</find>
       <find>class</find>
       <find>el</find>
@@ -147,6 +165,16 @@
       <find>path</find>
       <find>finnerHtml</find>
       <find>fParentArr1</find>
+      <find>iChild</find>
+      <find>wechat-body-myself-content</find>
+      <find>sendClickNum</find>
+      <find>resArr</find>
+      <find>decodeURI</find>
+      <find>encodeURI</find>
+      <find>log</find>
+      <find>encodeArr</find>
+      <find>mySayContent</find>
+      <find>myInput</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,7 +203,6 @@
         <option value="$PROJECT_DIR$/html/found/frienddetail.html" />
         <option value="$PROJECT_DIR$/css/found/frienddetail.css" />
         <option value="$PROJECT_DIR$/js/found/friend.js" />
-        <option value="$PROJECT_DIR$/js/wechat/wechat.js" />
         <option value="$PROJECT_DIR$/js/found/frienddetail.js" />
         <option value="$PROJECT_DIR$/js/book/index.js" />
         <option value="$PROJECT_DIR$/js/found/wellgame.js" />
@@ -209,9 +236,10 @@
         <option value="$PROJECT_DIR$/js/myself/index.js" />
         <option value="$PROJECT_DIR$/serve/demo1.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/serve/main.js" />
         <option value="$PROJECT_DIR$/js/wechat/index.js" />
         <option value="$PROJECT_DIR$/js/common.js" />
+        <option value="$PROJECT_DIR$/serve/main.js" />
+        <option value="$PROJECT_DIR$/js/wechat/wechat.js" />
       </list>
     </option>
   </component>
@@ -235,9 +263,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,12 +273,26 @@
             <path>
               <item name="weChatDeom" type="b2602c69:ProjectViewProjectNode" />
               <item name="weChatDeom" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weChatDeom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weChatDeom" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="wechat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="weChatDeom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="weChatDeom" type="462c0819:PsiDirectoryNode" />
+              <item name="serve" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,7 +400,8 @@
       <workItem from="1597459750848" duration="14526000" />
       <workItem from="1597885270736" duration="5891000" />
       <workItem from="1597973657383" duration="3774000" />
-      <workItem from="1598082157021" duration="4960000" />
+      <workItem from="1598082157021" duration="5213000" />
+      <workItem from="1598229027424" duration="19580000" />
     </task>
     <task id="LOCAL-00001" summary="idea 开发">
       <created>1594109264933</created>
@@ -629,15 +669,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598085828984</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="前端ajax POST请求的封装 前端拿到数据">
+      <created>1598087186559</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1598087186559</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320747000" />
+    <option name="totallyTimeSpent" value="340580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -647,19 +693,19 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5026652" side_tool="true" weight="0.32900432" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32359308" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49733475" weight="0.32900432" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3225108" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49733475" weight="0.37337664" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13539445" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13646056" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24786781" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -669,32 +715,32 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24786781" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32575756" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.114605546" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49733475" weight="0.32900432" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026652" side_tool="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32575756" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.114605546" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -704,7 +750,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="删除冗余代码" />
     <MESSAGE value="聊天页面ui的编辑 暂未写功能" />
     <MESSAGE value="朋友圈页面暂时写成音乐界面" />
     <MESSAGE value="小游戏的ui设计" />
@@ -729,14 +774,15 @@
     <MESSAGE value="创建服务器 并接口调通。" />
     <MESSAGE value="前端ajax POST请求的封装。" />
     <MESSAGE value="前端ajax POST请求的封装 前端入参中文乱码的解决 后端接受参数中文乱码的解决。" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端ajax POST请求的封装 前端入参中文乱码的解决 后端接受参数中文乱码的解决。" />
+    <MESSAGE value="前端ajax POST请求的封装 前端拿到数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="前端ajax POST请求的封装 前端拿到数据" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/wechat/index.js</url>
-          <line>121</line>
+          <line>136</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/found/wellgame.js</url>
@@ -763,8 +809,14 @@
           <line>67</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/wechat/wechat.js</url>
+          <line>126</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -838,20 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="114" column="24" lean-forward="true" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/wechat/wechat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/wechat/wechat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1116,22 +1154,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serve/main.js">
+    <entry file="file://$PROJECT_DIR$/html/wechat/wechat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="109" column="22" lean-forward="true" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="695">
+          <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/wechat/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="224" column="21" selection-start-line="224" selection-start-column="21" selection-end-line="224" selection-end-column="21" />
+        <state relative-caret-position="416">
+          <caret line="52" column="29" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="29" />
           <folding>
-            <element signature="e#917#1733#0" />
             <element signature="e#1784#1908#0" />
             <element signature="e#1959#3083#0" />
             <element signature="e#3133#3804#0" />
@@ -1147,8 +1181,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="319" column="5" selection-start-line="319" selection-start-column="5" selection-end-line="319" selection-end-column="5" />
+        <state relative-caret-position="746">
+          <caret line="327" column="48" lean-forward="true" selection-start-line="323" selection-start-column="12" selection-end-line="327" selection-end-column="48" />
           <folding>
             <element signature="e#251#335#0" />
             <element signature="n#!!block;n#YY53KG#0" />
@@ -1162,11 +1196,36 @@
             <element signature="n#!!block;n#showDate#0" />
             <element signature="n#!!block;n#weekDay#0" />
             <element signature="n#!!block;n#debounce#0" />
-            <element signature="n#!!block;n#nowLocation#0" />
             <element signature="n#!!block;n#backLocation#0" />
             <element signature="n#!!block;n#randColor#0" />
             <element signature="n#!!block;n#searchInsert#0" />
-            <element signature="e#7983#8336#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serve/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="193" column="33" lean-forward="true" selection-start-line="193" selection-start-column="33" selection-end-line="193" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#2718#2929#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/wechat/wechat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="e#1794#1830#0" />
+            <element signature="n#!!block;n#contentClick#0" />
+            <element signature="e#3668#3691#0" />
+            <element signature="e#3737#3757#0" />
+            <element signature="e#3804#3882#0" />
+            <element signature="e#3928#4184#0" />
           </folding>
         </state>
       </provider>
