@@ -1,0 +1,146 @@
+.videoauthor{
+    /*height: 97.5%;*/
+    background: #fff;
+    padding: 2%;
+    width: 96%;
+}
+.videoauthor-header{
+    text-align: center;
+    padding: 2% 0;
+}
+.videoauthor-header a{
+    float: left;
+    font-size: 16px;
+    color:#333;
+}
+.videoauthor-infor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.videoauthor-infor .videoauthor-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: magenta;
+}
+.videoauthor-infor .videoauthor-information{
+    width: calc(100% - 50px);
+}
+.videoauthor-infor .videoauthor-information .videoauthor-information-top ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.videoauthor-infor .videoauthor-information .videoauthor-information-top ul li{
+    display: flex;
+    flex-direction: column;
+}
+.videoauthor-infor .videoauthor-information .videoauthor-information-top ul li .videoauthor-font{
+    color:#989898;
+    font-size: 14px;
+}
+.videoauthor-infor .videoauthor-information .videoauthor-information-buttom{
+    background: red;
+    color:#fff;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    padding: 2% 0;
+    border-radius: 20px;
+    margin-top: 1%;
+}
+.videoauthor-level{
+    padding: 2% 0;
+    display: flex;
+}
+.videoauthor-level .videoauthor-level-first,.videoauthor-level .videoauthor-level-second{
+    background: #eee;
+    border-radius: 6px;
+    padding: 1%;
+    color:#666;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.videoauthor-level .videoauthor-level-second{
+    margin-left: 10px;
+}
+.videoauthor-level span .videoauthor-level-img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: lime;
+    display: inline-block;
+}
+.videoauthor-share{
+    padding: 0 0 2% 0;
+    color:#333;
+}
+.videoauthor-share .videoauthor-share-text{
+    overflow: hidden;
+    white-space:nowrap;
+    width:96%;
+    display:block;
+}
+.videoauthor-gift{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.videoauthor-gift>div{
+    width: 45%;
+    background: #eee;
+    border-radius: 10px;
+    padding: 1%;
+}
+.videoauthor-gift>div .videoauthor-gift-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.videoauthor-gift>div .videoauthor-gift-img{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1% 0;
+}
+.videoauthor-gift>div .videoauthor-gift-img span{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #333333;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+.videoauthor-works{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.videoauthor-works-child{
+    width: 30%;
+    background: #eee;
+    margin-top: 1%;
+    margin-left: 1%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1%;
+}
+.videoauthor-works-child .videoauthor-child-footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.videoauthor-works-child .videoauthor-child-footer .videoauthor-child-love{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: pink;
+}
