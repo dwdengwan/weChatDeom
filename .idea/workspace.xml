@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e82f0ba8-5cef-4f1b-bfc1-aec9ab0f82e7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/css/found/videoauthor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/found/videodetails.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/found/videoauthor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/found/videodetails.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/found/videoauthor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/found/videodetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/serve/API/assert.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/found/video.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/found/video.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/found/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/found/video.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/found/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/found/video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/found/videoauthor.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/found/videoauthor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/found/videodetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/found/videodetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/found/videoauthor.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/found/videoauthor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/found/videodetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/found/videodetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/found/videoauthor.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/found/videoauthor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/found/videodetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/found/videodetails.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,56 +19,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="videoauthor.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/found/videoauthor.js">
+      <file leaf-file-name="videodetails.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/found/videodetails.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="15" column="100" selection-start-line="15" selection-start-column="100" selection-end-line="15" selection-end-column="100" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="videoauthor.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/found/videoauthor.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="videoauthor.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/found/videoauthor.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="51" column="43" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="43" />
+            <state relative-caret-position="600">
+              <caret line="142" column="41" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#4;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#5;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#6;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#7;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#8;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#9;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#10;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#11;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#12;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#13;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#14;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#15;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#16;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#17;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#18;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="721">
+              <caret line="311" column="29" selection-start-line="311" selection-start-column="29" selection-end-line="311" selection-end-column="29" />
+              <folding>
+                <element signature="e#251#335#0" />
+                <element signature="n#!!block;n#YY53KG#0" />
+                <element signature="e#738#1132#0" />
+                <element signature="e#1237#1585#0" />
+                <element signature="e#1605#1929#0" />
+                <element signature="n#!!block;n#addInnerHtml#0" />
+                <element signature="n#!!block;n#common#0" />
+                <element signature="n#!!block;n#num#0" />
+                <element signature="n#!!block;n#nowTime#0" />
+                <element signature="n#!!block;n#showDate#0" />
+                <element signature="n#!!block;n#weekDay#0" />
+                <element signature="n#!!block;n#debounce#0" />
+                <element signature="n#!!block;n#backLocation#0" />
+                <element signature="n#!!block;n#searchInsert#0" />
+                <element signature="n#!!block;n#httpPOST#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="videodetails.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/found/videodetails.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="152" column="19" lean-forward="true" selection-start-line="152" selection-start-column="19" selection-end-line="152" selection-end-column="19" />
+              <folding>
+                <element signature="e#410#747#0" />
+                <element signature="e#797#1164#0" />
+                <element signature="e#1217#1367#0" />
+                <element signature="e#1408#1647#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="videodetails.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/found/videodetails.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -90,9 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nowLocation</find>
-      <find>nowTime</find>
-      <find>weekDay</find>
       <find>found-content-child</find>
       <find>class</find>
       <find>el</find>
@@ -120,6 +121,9 @@
       <find>encodeArr</find>
       <find>mySayContent</find>
       <find>myInput</find>
+      <find>videoauthor-share</find>
+      <find>videoauthor-gift</find>
+      <find>height</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,12 +183,12 @@
         <option value="$PROJECT_DIR$/html/found/video.html" />
         <option value="$PROJECT_DIR$/css/found/video.css" />
         <option value="$PROJECT_DIR$/js/found/video.js" />
-        <option value="$PROJECT_DIR$/js/found/videodetails.js" />
-        <option value="$PROJECT_DIR$/css/found/videodetails.css" />
-        <option value="$PROJECT_DIR$/html/found/videodetails.html" />
         <option value="$PROJECT_DIR$/html/found/videoauthor.html" />
         <option value="$PROJECT_DIR$/css/found/videoauthor.css" />
         <option value="$PROJECT_DIR$/js/found/videoauthor.js" />
+        <option value="$PROJECT_DIR$/html/found/videodetails.html" />
+        <option value="$PROJECT_DIR$/css/found/videodetails.css" />
+        <option value="$PROJECT_DIR$/js/found/videodetails.js" />
       </list>
     </option>
   </component>
@@ -210,7 +214,6 @@
     <panes>
       <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,32 +232,11 @@
               <item name="html" type="462c0819:PsiDirectoryNode" />
               <item name="found" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="weChatDeom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChatDeom" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChatDeom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChatDeom" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="found" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChatDeom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChatDeom" type="462c0819:PsiDirectoryNode" />
-              <item name="serve" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weChatDeom" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weChatDeom" type="462c0819:PsiDirectoryNode" />
-              <item name="serve" type="462c0819:PsiDirectoryNode" />
-              <item name="API" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,7 +346,8 @@
       <workItem from="1597973657383" duration="3774000" />
       <workItem from="1598082157021" duration="5213000" />
       <workItem from="1598229027424" duration="19636000" />
-      <workItem from="1598315783096" duration="22476000" />
+      <workItem from="1598315783096" duration="22545000" />
+      <workItem from="1598402262467" duration="26394000" />
     </task>
     <task id="LOCAL-00001" summary="idea 开发">
       <created>1594109264933</created>
@@ -646,14 +629,22 @@
       <option name="project" value="LOCAL" />
       <updated>1598263322928</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="新增小视频页面">
+      <created>1598349851585</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1598349851585</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="363112000" />
+    <option name="totallyTimeSpent" value="389575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -663,19 +654,19 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5026652" side_tool="true" weight="0.32900432" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32142857" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3225108" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49733475" weight="0.534632" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1380597" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1380597" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24786781" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -685,17 +676,17 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.24786781" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32575756" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.114605546" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32575756" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -707,7 +698,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -720,7 +711,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="朋友圈页面暂时写成音乐界面" />
     <MESSAGE value="小游戏的ui设计" />
     <MESSAGE value="小游戏的ui 操作键的编写。" />
     <MESSAGE value="井图游戏的编写" />
@@ -745,7 +735,8 @@
     <MESSAGE value="前端ajax POST请求的封装 前端入参中文乱码的解决 后端接受参数中文乱码的解决。" />
     <MESSAGE value="前端ajax POST请求的封装 前端拿到数据" />
     <MESSAGE value="前端ajax POST请求的封装 前端拿到数据渲染" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端ajax POST请求的封装 前端拿到数据渲染" />
+    <MESSAGE value="新增小视频页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增小视频页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -787,7 +778,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/serve/main.js</url>
           <line>123</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
@@ -795,20 +785,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/found/music.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="114" column="24" lean-forward="true" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/found/shake.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/found/shake.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -1027,13 +1003,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serve/demo0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1056,30 +1026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2375">
-          <caret line="327" column="48" selection-start-line="323" selection-start-column="12" selection-end-line="327" selection-end-column="48" />
-          <folding>
-            <element signature="e#251#335#0" />
-            <element signature="n#!!block;n#YY53KG#0" />
-            <element signature="e#738#1132#0" />
-            <element signature="e#1237#1585#0" />
-            <element signature="e#1605#1929#0" />
-            <element signature="n#!!block;n#addInnerHtml#0" />
-            <element signature="n#!!block;n#common#0" />
-            <element signature="n#!!block;n#num#0" />
-            <element signature="n#!!block;n#nowTime#0" />
-            <element signature="n#!!block;n#showDate#0" />
-            <element signature="n#!!block;n#weekDay#0" />
-            <element signature="n#!!block;n#debounce#0" />
-            <element signature="n#!!block;n#backLocation#0" />
-            <element signature="n#!!block;n#randColor#0" />
-            <element signature="n#!!block;n#searchInsert#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/wechat/wechat.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -1094,9 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1111,36 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="37" column="39" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="37" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/found/videodetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/found/videodetails.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/found/videodetails.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="133" column="22" selection-start-line="133" selection-start-column="22" selection-end-line="133" selection-end-column="22" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1182,23 +1095,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/found/friend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1604">
+          <folding>
+            <element signature="e#162#1559#0" />
+            <element signature="e#168#576#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/found/frienddetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="76" column="20" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/found/videoauthor.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+        <state relative-caret-position="130">
+          <caret line="87" column="17" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/found/videoauthor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="51" column="43" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="43" />
+        <state relative-caret-position="695">
+          <caret line="196" column="49" lean-forward="true" selection-start-line="196" selection-start-column="49" selection-end-line="196" selection-end-column="49" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -1225,8 +1155,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/found/videoauthor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="100" selection-start-line="15" selection-start-column="100" selection-end-line="15" selection-end-column="100" />
+        <state relative-caret-position="275">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/found/videodetails.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/found/videodetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="142" column="41" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="311" column="29" selection-start-line="311" selection-start-column="29" selection-end-line="311" selection-end-column="29" />
+          <folding>
+            <element signature="e#251#335#0" />
+            <element signature="n#!!block;n#YY53KG#0" />
+            <element signature="e#738#1132#0" />
+            <element signature="e#1237#1585#0" />
+            <element signature="e#1605#1929#0" />
+            <element signature="n#!!block;n#addInnerHtml#0" />
+            <element signature="n#!!block;n#common#0" />
+            <element signature="n#!!block;n#num#0" />
+            <element signature="n#!!block;n#nowTime#0" />
+            <element signature="n#!!block;n#showDate#0" />
+            <element signature="n#!!block;n#weekDay#0" />
+            <element signature="n#!!block;n#debounce#0" />
+            <element signature="n#!!block;n#backLocation#0" />
+            <element signature="n#!!block;n#searchInsert#0" />
+            <element signature="n#!!block;n#httpPOST#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/found/videodetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="152" column="19" lean-forward="true" selection-start-line="152" selection-start-column="19" selection-end-line="152" selection-end-column="19" />
+          <folding>
+            <element signature="e#410#747#0" />
+            <element signature="e#797#1164#0" />
+            <element signature="e#1217#1367#0" />
+            <element signature="e#1408#1647#0" />
+          </folding>
         </state>
       </provider>
     </entry>

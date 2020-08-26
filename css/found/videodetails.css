@@ -1,20 +1,29 @@
 .videodetails-content{
-    height: 97.5%;
+    /*height: 97.5%;*/
+    padding: 0;
+    width: 100%;
+    height: 100%;
     position: relative;
+    background: #22997b;
 }
 .videodetails-instruction{
     color:#fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4%;
-    /*background: rgba(255,255,255,0.5);*/
     display: flex;
     justify-content: space-between;
     font-size: 28px;
     align-items: center;
     padding: 2%;
     width: 96%;
+    height: 4%;
+}
+.videodetails-canvas{
+    height: 93.5%;
+    width: 100%;
+}
+.videodetails-canvas #myCanvas{
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*color:yellowgreen;*/
 }
 .videodetails-fixed{
     position: absolute;
