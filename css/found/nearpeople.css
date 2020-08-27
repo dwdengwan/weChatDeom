@@ -1,5 +1,17 @@
+.nearpeople-header{
+    position: absolute;
+    background: rgba(255,255,255,0.1);
+    z-index: 999;
+}
+.nearpeople-header a{
+    color:#000;
+}
 .nearpeople-content{
-    height: 91.5%;
+    /*height: 91.5%;*/
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
 }
 .nearpeople-content .nearpeople-content-lunbo{
     height: 50%;
