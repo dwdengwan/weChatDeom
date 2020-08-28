@@ -33,14 +33,13 @@
            childArr[z].style.top = '66%';
            childArr[z].style.left = 3 + 32*(z-6) + '%';
        }
+       //触屏开始
        childArr[z].addEventListener('touchstart',function (e) {
             e.preventDefault()
             console.log(childArr[z].style.top)
             countTop = parseInt(childArr[z].style.top.split('%'));
             nowTop = parseInt(childArr[z].style.top.split('%'));
-            timer = setTimeout(()=>{
-                localStorage.setItem('nowTop',nowTop);
-            },1)
+           localStorage.setItem('nowTop',nowTop);
             switch (countTop){
                 case 2:
                     break;
@@ -52,21 +51,24 @@
             // if (countTop)
             // console.log('touchstart',e.changedTouches[0].clientX,e.changedTouches[0].clientY)
        })
+       //触屏中
        childArr[z].addEventListener('touchmove',function (e) {
            e.preventDefault()
+           localStorage.setItem('nowTop',nowTop);
            timer = setTimeout(()=>{
-               localStorage.setItem('nowTop',nowTop);
+               nowTop = parseInt(childArr[z].style.top.split('%'));
+               if (nowTop>parseInt(localStorage.getItem('nowTop'))){
+                   countTop ++;
+               } else{
+                   countTop --;
+               }
+               console.log(nowTop+'00',parseInt(localStorage.getItem('nowTop')+'01'))
+               console.log(countTop)
+               childArr[z].style.top = countTop + '%';
            },1)
-           nowTop = parseInt(childArr[z].style.top.split('%'));
-           if (nowTop>parseInt(localStorage.getItem('nowTop'))){
-               countTop ++;
-           } else{
-               countTop --;
-           }
-           console.log(nowTop,parseInt(localStorage.getItem('nowTop'),countTop))
-           childArr[z].style.top = countTop + '%';
            // console.log('touchmove',e.changedTouches[0].clientX,e.changedTouches[0].clientY)
        })
+       //触屏结束
        childArr[z].addEventListener('touchend',function (e) {
            e.preventDefault()
            // console.log(countTop)
@@ -74,7 +76,7 @@
                childArr[z].style.top = '2%';
            }else if (countTop < 49){
                childArr[z].style.top = '34%';
-           } else if (countTop < 81) {
+           } else {
                childArr[z].style.top = '66%';
            }
            countNum ++;
